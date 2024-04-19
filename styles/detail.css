@@ -1,6 +1,11 @@
+@charset "utf-8";
+
 body {
     background-color: #c4e4f5;
     margin-top: 80;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
 }
 
 .form {
