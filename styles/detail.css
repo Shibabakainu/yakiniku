@@ -1,0 +1,33 @@
+body {
+    background-color: #c4e4f5;
+    margin-top: 80;
+}
+
+.form {
+    margin: 10px;
+}
+
+.detail_h2 {
+    margin-top: 100px;
+    background-color: #f1521a;
+    color: white;
+}
+
+.name {
+    text-align: right;
+}
+
+.image {
+    width: 400pt;
+    height: auto;
+}
+
+.button {
+    width: 100pt;
+    height: 30pt;
+    margin-top: 0px;
+}
+
+p {
+    margin: 8px;
+}

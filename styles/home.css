@@ -1,0 +1,68 @@
+@charset "utf-8";
+
+body {
+    margin: 0;
+    padding: 0;
+}
+.navbar {
+    z-index: 9999;
+    overflow: hidden;
+    background-color:steelblue;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 50px;
+}
+.navbar a {
+    float: right;
+    display: block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    padding: 16px 30px;
+    transition: 0.5s ease;
+}
+.navbar a:hover {
+    background-color:deepskyblue;
+    color: black;
+}
+.wrap {
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 1px;
+    background-color: bisque;
+    /*background-image: url(background/pic2.jpg);
+    background-position: bottom;
+    background-size: cover;*/
+    height: 100%;
+}
+.preview {
+    color:aliceblue;
+    font-size: 2rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: rgba(0,0,0,.5);
+    border-radius: 10px;
+    padding: 0 50px 0 50px;
+    margin: 20px 50px 20px 20px;
+    justify-content: space-between;
+    width: 200px;
+}
+header {
+    width: auto;
+    height: 300px;
+    margin: 0;
+    padding-top: 0;
+    text-align: center;
+    background-color: mediumturquoise;
+    /*background-image: url(images/landscape.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;*/
+}
+header h1 {
+    color:aliceblue;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 80px;
+    padding-top: 100px;
+    margin-top: 20px;
+}

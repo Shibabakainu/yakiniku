@@ -1,0 +1,23 @@
+@charset "utf-8";
+
+body {
+    margin-top: 80px;
+}
+
+h3 {
+    font-size: 24pt;
+    font-weight: bold;
+}
+
+p {
+    font-size: 15pt;
+}
+
+textarea {
+    font-size: 12pt;
+    resize: none;
+    width: 350px;
+    height: 100px;
+}
+
+
