@@ -2,8 +2,8 @@
 
 <nav>
     <a href="login.php">ログアウト</a>
-    <a href="upload.php">アップロード</a>
-    <a href="question.php">質問投稿</a>
+    <a href="upload.php">作品を投稿</a>
+    <a href="question.php">質問を投稿</a>
     <a href="view.php">記事閲覧</a> <!-- リンク先未作成 -->
     <a href="view.php">作品閲覧</a>
     <a href="profiledemo.php">プロフィール</a>
