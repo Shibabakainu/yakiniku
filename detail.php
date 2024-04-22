@@ -10,7 +10,7 @@ require_once __DIR__ . '/nav.php';
 </head>
 
 <body class="detail_body">
-    <form action="./view.php" class="view_form">
+    <form class="view_form">
         <h2 class="detail_h2">ChatGPTに聞いてみた！</h2>
         <p class="name">投稿者：神戸　太郎</p>
         <p>
@@ -24,7 +24,12 @@ require_once __DIR__ . '/nav.php';
             このように知りたいことをまとめて教えてくれました。<br>
             次回は、スクラム開発の中で行われる、「デイリースクラム」についてです。
         </p>
-        <input type="button" class="button" onclick="location.href='./view.php'" value="戻る">
+
+        <?php
+            require_once __DIR__ . '/DownloadButton.php';   // ダウンロードボタンの呼び出し
+        ?>
+
+        <input type="button" class="return_button" onclick="location.href='./view.php'" value="戻る">
 
     </form>
 

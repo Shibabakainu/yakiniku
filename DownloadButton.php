@@ -1,28 +1,11 @@
-<!-- ダウンロード機能を試していたページ -->
-<!-- 画面上のボタンをクリックするとdummy.txtというテキストファイルがダウンロードできます -->
-
-<!DOCTYPE html>
-<html lang="ja">
-    <head>
-        <meta charset="utf-8">
-        <title>ダウンロード</title>
-    </head>
-
-    <body>
-    <button onclick="downloadFile()">ファイルをダウンロード</button>
-
-    <?php
-    require_once __DIR__ . '/DownloadButton.php';   // ダウンロードボタンの呼び出し
-    ?>
-    </body>
-</html>
+<button onclick="downloadFile()">ファイルをダウンロード</button>
 
 <!-- JavaScriptで作成したダウンロード機能のスクリプト -->
 <script>
     function downloadFile() {
         // サーバーサイドからファイルを取得するリクエストを送信
         // ()の中にサーバーサイドのファイルを所有するエンドポイントのURLを記述
-        fetch('download_path.php')
+        fetch('http://localhost/yakiniku/DownloadPath.php')
             .then(response => response.blob())
             .then(blob => {
                 // ファイルをダウンロード
