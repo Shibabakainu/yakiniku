@@ -47,7 +47,7 @@
     <div class="container">
         <h2>Login</h2>
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-            <input type="text" name="username" placeholder="ID" required>
+            <input type="text" name="username" placeholder="メールアドレス" required>
             <input type="password" name="password" placeholder="パスワード" required>
             <?php
             // フォームが送信された場合の処理
@@ -66,7 +66,7 @@
             ?>
             <input type="submit" value="ログイン">
         </form>
-        <a href="signup.php">新規作成</a>
+        <a href="profile.php">新規作成</a>
 
     </div>
 </body>
