@@ -32,9 +32,6 @@ body {
     margin-left: auto;
     padding-top: 1px;
     background-color: bisque;
-    /*background-image: url(background/pic2.jpg);
-    background-position: bottom;
-    background-size: cover;*/
     height: 100%;
 }
 .wrap .card {
@@ -52,9 +49,6 @@ header {
     padding-top: 0;
     text-align: center;
     background-color: mediumturquoise;
-    /*background-image: url(images/landscape.jpg);
-    background-size:cover;
-    background-repeat: no-repeat;*/
 }
 header h1 {
     color:aliceblue;
