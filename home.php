@@ -13,17 +13,20 @@ require_once __DIR__ . '/nav.php';
             <h1>プログラミング情報共有</h1>
         </header>
         <div class="wrap">
-            <div class="card">
+            <div class="card" onclick="view.php">
+                <h2>記事閲覧</h2>
                 <h3>内容</h3>
-                <h3>内容</h3>
-                <h3>内容</h3>
-                <h3>内容</h3>
+
             </div>
             <div class="card">
-                <h3>アップロード</h3>
-                <h3>アップロード</h3>
-                <h3>アップロード</h3>
-                <h3>アップロード</h3>
+                <h2>作品閲覧</h2>
+                <h3>内容</h3>
+                
+            </div>
+            <div class="card">
+                <h2>アップロード</h2>
+                <h3>内容</h3>
+                
             </div>
         </div>
     </body>
