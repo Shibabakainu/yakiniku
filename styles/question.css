@@ -1,0 +1,27 @@
+@charset "utf-8";
+
+body {
+    margin-top: 80px;
+}
+
+h3 {
+    font-size: 24pt;
+    font-weight: bold;
+}
+
+p {
+    font-size: 15pt;
+}
+
+textarea {
+    font-size: 12pt;
+    resize: none;
+    width: 400px;
+    height: 150px;
+}
+
+.submit {
+    width: 80pt;
+    height: 30pt;
+    margin-top: 30pt;
+}
