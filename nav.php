@@ -6,6 +6,6 @@
     <a href="question.php">質問投稿</a>
     <a href="view.php">記事閲覧</a> <!-- リンク先未作成 -->
     <a href="view.php">作品閲覧</a>
-    <a href="profile">プロフィール</a> <!-- リンク先なし -->
+    <a href="profiledemo.php">プロフィール</a>
     <a href="home.php">ホーム</a>
 </nav>
