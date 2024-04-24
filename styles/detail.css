@@ -1,11 +1,14 @@
 @charset "utf-8";
 
 body {
-    background-color: #c4e4f5;
-    margin-top: 80;
+    margin-top: 0px;
     margin-left: 0px;
     margin-right: 0px;
     margin-bottom: 0px;
+}
+
+.view_form {
+    margin-bottom: 30px;
 }
 
 .form {
@@ -13,18 +16,21 @@ body {
 }
 
 .detail_h2 {
-    margin-top: 100px;
+    margin-top: 50px;
     background-color: #f1521a;
     color: white;
 }
 
 .name {
     text-align: right;
+    margin-right: 20px;
 }
 
 .image {
+    background-color: azure;
     width: 400pt;
     height: auto;
+    margin-left: 25px;
 }
 
 .button {
@@ -35,4 +41,12 @@ body {
 
 p {
     margin: 8px;
+}
+
+.report_body {
+    margin-left: 20px;
+}
+
+.return_button {
+    margin-left: 8px;
 }
