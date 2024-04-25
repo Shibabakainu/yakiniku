@@ -38,6 +38,27 @@ require_once __DIR__ . '/nav.php';
                 <input type="button" class="return_button" onclick="location.href='./view.php'" value="戻る">
 
         </form>
+        <h2>コメント入力</h2>
+        <!-- コメント入力 -->
+        <form method="POST" action="comment_submit.php">
+            <div>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div>
+                <label for="comment">Comment:</label>
+                <textarea id="comment" name="comment" required></textarea>
+            </div>
+            <div>
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+
+        <!-- コメント表示 -->
+        <h2>コメント欄</h2>
+        <div id="comments">
+            <?php include 'comment_display.php'; ?>
+        </div>
     </div>
 </body>
 </html>
