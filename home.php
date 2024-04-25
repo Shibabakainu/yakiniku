@@ -28,6 +28,11 @@ require_once __DIR__ . '/nav.php';
                 <h3>内容</h3>
                 
             </div>
+            <button type="button">
+                <h2>質問</h2>
+                <h3>回答</h3>
+            </button>
+            
         </div>
     </body>
 
