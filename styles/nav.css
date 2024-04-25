@@ -25,17 +25,7 @@ a:hover {
     color: black;
 }
 
-.wrap {
-    width: 80%;
-    margin-right: auto;
-    margin-left: auto;
-    padding-top: 1px;
-    background-color: bisque;
-    /*background-image: url(background/pic2.jpg);
-    background-position: bottom;
-    background-size: cover;*/
-    height: 100%;
-}
+
 .preview {
     color:aliceblue;
     font-size: 2rem;
