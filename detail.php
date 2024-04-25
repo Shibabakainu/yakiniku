@@ -29,9 +29,9 @@ require_once __DIR__ . '/nav.php';
             require_once __DIR__ . '/DownloadButton.php';   // ダウンロードボタンの呼び出し
         ?><br>
 
-    <?php
-        require_once __DIR__ . '/GoodButton.php';   // グッドボタンの呼び出し
-    ?>
+        <?php
+            require_once __DIR__ . '/GoodButton.php';   // グッドボタンの呼び出し
+        ?>
 
 
         <input type="button" class="return_button" onclick="location.href='./view.php'" value="戻る">
