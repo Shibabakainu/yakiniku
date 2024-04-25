@@ -1,4 +1,6 @@
-<button onclick="downloadFile()">ファイルをダウンロード</button>
+<div style="text-align: center;">
+    <button onclick="downloadFile()">ファイルをダウンロード</button>
+</div>
 
 <!-- JavaScriptで作成したダウンロード機能のスクリプト -->
 <script>
