@@ -50,7 +50,7 @@ require_once __DIR__ . '/nav.php';
                 <textarea id="comment" name="comment" required></textarea>
             </div>
             <div>
-                <button type="submit">Submit</button>
+                <button type="submit">送信</button>
             </div>
         </form>
 

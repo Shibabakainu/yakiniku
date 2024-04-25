@@ -33,7 +33,7 @@ require_once __DIR__ . '/nav.php';
     </head>
 
     <body>
-        <p class="view_p">投稿作品一覧</p>
+        <h1>投稿作品一覧</h1>
         <table border="1" style="border-collapse: collapse">
             <tr bgcolor="#e6e6fa">
                 <td width="400px">タイトル</td>
