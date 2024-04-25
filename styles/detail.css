@@ -1,12 +1,16 @@
 @charset "utf-8";
 
 body {
-    margin-top: 0px;
-    margin-left: 0px;
-    margin-right: 0px;
-    margin-bottom: 0px;
+    margin: 0;
 }
-
+.wrap {
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 1px 30px;
+    background-color: #c4e4f5;
+    height: 100%;
+}
 .view_form {
     margin-bottom: 30px;
 }
