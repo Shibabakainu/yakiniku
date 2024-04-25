@@ -33,16 +33,25 @@ body {
     border-color: deepskyblue;
     padding: 0.333em 1em 0.25em;
     line-height: 1.2em;
+    box-shadow: 0 0.25em 1em -0.25em rgba(0, 0, 0, 0.498);
+    cursor: pointer;
+    transition: color 150ms ease-in-out, background-color 150ms ease-in-out, transform 150ms ease-in-out;
+    outline: 0;
+    margin-right: 5px;
+}
+
+.commentButton {
+    color: gray;
+    font-size: 1.5em;
+    background-color: #ffffff;
+    border: 0.1em solid;
+    border-radius: 1em;
+    border-color: #ffffff;
+    padding: 0.333em 1em 0.25em;
+    line-height: 1.2em;
     box-shadow: 0 0.25em 1em -0.25em;
     cursor: pointer;
     transition: color 150ms ease-in-out, background-color 150ms ease-in-out, transform 150ms ease-in-out;
     outline: 0;
     margin-right: 30px;
-}
-
-
-.likeButton.liked {
-    color: #ffffff;
-    background-color: deepskyblue;
-    border-color: deepskyblue;
 }

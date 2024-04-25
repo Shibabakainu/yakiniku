@@ -44,9 +44,11 @@ require_once __DIR__ . '/nav.php';
                 <th>
                     ChatGPTに今話題のデイリースクラムについて聞いてみた！
                     <div style="text-align: right;">
-                        <button type="button" class="likeButton">
-                            <span class="material-symbols-outlined">thumb_up</span>
-                            <span>32</span>
+                        <button type="button" class="likeButton">   <!-- 高評価数の表示 -->
+                            <span class="material-symbols-outlined">thumb_up</span><span>32</span>
+                        </button>
+                        <button type="button" class="commentButton">    <!-- コメント数の表示 -->
+                            <span class="material-symbols-outlined">comment</span><span>3</span>
                         </button>
                     </div>
                 </th>
@@ -56,9 +58,11 @@ require_once __DIR__ . '/nav.php';
                 <th>
                     この記事では、機械学習の基本から応用までを解説します。アルゴリズム、データセット、モデルの選択方法などについて詳しく説明します。
                     <div style="text-align: right;">
-                        <button type="button" class="likeButton">
-                            <span class="material-symbols-outlined">thumb_up</span>
-                            <span>89</span>
+                        <button type="button" class="likeButton">   <!-- 高評価数の表示 -->
+                            <span class="material-symbols-outlined">thumb_up</span><span>89</span>
+                        </button>
+                        <button type="button" class="commentButton">    <!-- コメント数の表示 -->
+                            <span class="material-symbols-outlined">comment</span><span>5</span>
                         </button>
                     </div>
                 </th>
@@ -68,9 +72,11 @@ require_once __DIR__ . '/nav.php';
                 <th>
                     フロントエンド開発の最新トレンドを紹介する記事です。Webコンポーネント、TypeScript、モバイルフレームワークなどに焦点を当てています。
                     <div style="text-align: right;">
-                        <button type="button" class="likeButton">
-                            <span class="material-symbols-outlined">thumb_up</span>
-                            <span>12</span>
+                        <button type="button" class="likeButton">   <!-- 高評価数の表示 -->
+                            <span class="material-symbols-outlined">thumb_up</span><span>12</span>
+                        </button>
+                        <button type="button" class="commentButton">    <!-- コメント数の表示 -->
+                            <span class="material-symbols-outlined">comment</span><span>1</span>
                         </button>
                     </div>
                 </th>
@@ -80,9 +86,11 @@ require_once __DIR__ . '/nav.php';
                 <th>
                     サーバーレスアーキテクチャの選択肢と、それぞれのプラットフォームでの実装方法を比較する記事です。関数のデプロイ、スケーリング、コストなどについて詳しく解説します。
                     <div style="text-align: right;">
-                        <button type="button" class="likeButton">
-                            <span class="material-symbols-outlined">thumb_up</span>
-                            <span>56</span>
+                        <button type="button" class="likeButton">   <!-- 高評価数の表示 -->
+                            <span class="material-symbols-outlined">thumb_up</span><span>56</span>
+                        </button>
+                        <button type="button" class="commentButton">    <!-- コメント数の表示 -->
+                            <span class="material-symbols-outlined">comment</span><span>4</span>
                         </button>
                     </div>
                 </th>
