@@ -28,10 +28,9 @@ body {
 }
 .wrap {
     width: 80%;
-    margin-right: auto;
-    margin-left: auto;
+    margin: auto;
     padding-top: 1px;
-    background-color: bisque;
+    background-color: #c4e4f5;
     height: 100%;
 }
 .wrap .card {

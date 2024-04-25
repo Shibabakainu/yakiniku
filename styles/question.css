@@ -4,6 +4,14 @@ body {
     margin-top: 80px;
 }
 
+.wrap {
+    width: 80%;
+    margin:auto;
+    background-color: #c4e4f5;
+    padding: 50px 0 0 30px;
+    height: 100%;
+}
+
 h3 {
     font-size: 24pt;
     font-weight: bold;
