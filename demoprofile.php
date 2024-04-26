@@ -31,7 +31,7 @@ require_once __DIR__ . '/nav.php';
             text-decoration: none;
             display: inline-block;
             font-size: 16px;
-            margin-right: 1350px; /* ボタンの右側に適切な間隔を設定 */
+            
             cursor: pointer;
             border-radius: 12px;
         }
@@ -62,7 +62,7 @@ echo "<p><strong>一言:</strong> $singleword</p>";
 ?>
 
 <!-- 編集ボタンをユーザーのデータの下に配置 -->
-<a href='demo_edit_profile.php' class="edit_button">編集</a>
+<a href='identification.php' class="edit_button">編集</a>
 
 <br><br> <!-- ボタンとテーブルの間に適切な間隔を設定 -->
 

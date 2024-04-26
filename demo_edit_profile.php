@@ -58,6 +58,9 @@ require_once __DIR__ . '/nav.php'; // ナビゲーションバーのインクル
 
             echo "<label for='singleword'>一言:</label><br>";
             echo "<input type='text' id='singleword' name='singleword' value='$singleword'><br><br>";
+
+            echo "<input type='hidden' id='original_icon_path' name='original_icon_path' value='$icon_path'>"; // 元の画像パスを送信
+
             ?>
             <input type="submit" value="保存">
         </form>

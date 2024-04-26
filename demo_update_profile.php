@@ -50,33 +50,33 @@ require_once __DIR__ . '/nav.php'; // ナビゲーションバーのインクル
         $name = $_POST['name'] ?? '';
         $singleword = $_POST['singleword'] ?? '';
 
-        // アップロードされた画像のパスを取得
-        $icon_path = $_FILES["profile_image"]["name"] ?? '';
-        // 画像ファイルの処理
-        if(isset($_FILES["profile_image"]["tmp_name"])) {
-            // 一時ファイルから画像を読み込み
+                // フォームから送信された画像のファイルがあるかどうかを確認
+        if(isset($_FILES["profile_image"]["tmp_name"]) && $_FILES["profile_image"]["tmp_name"] !== "") {
+            // アップロードされた画像のパスを取得
             $icon_path = $_FILES["profile_image"]["tmp_name"];
+            
+            // 画像ファイルの処理
+            $target_dir = "changeprofile/"; // 画像を保存するディレクトリ
+            $target_file = $target_dir . basename($_FILES["profile_image"]["name"]);
+            $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
+
+            // ファイルを一時的な場所に移動して保存
+            $temp_image = $_FILES['profile_image']['tmp_name'];
+            $final_image = $target_dir . uniqid() . '.' . $imageFileType;
+            move_uploaded_file($temp_image, $final_image);
+        } else {
+            // フォームから送信された画像のファイルがない場合は、元の画像のパスを使用する
+            $icon_path = $_POST['original_icon_path'] ?? ''; // 元の画像のパスを取得
         }
-        
-        // 画像ファイルの処理
-        $target_dir = "changeprofile/"; // 画像を保存するディレクトリ
-        $target_file = $target_dir . basename($_FILES["profile_image"]["name"]);
-        $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
-
-        // ファイルを一時的な場所に移動して保存
-        $temp_image = $_FILES['profile_image']['tmp_name'];
-        $final_image = $target_dir . uniqid() . '.' . $imageFileType;
-        move_uploaded_file($temp_image, $final_image);
-
         // 受け取ったデータを表示
-        echo "<p><strong>プロフィール画像:</strong><br><img src='$final_image' class='profile_update'></p>";
+        echo "<p><strong>プロフィール画像:</strong><br><img src='$icon_path' class='profile_update'></p>";
         echo "<p><strong>名前:</strong> $name</p>";
         echo "<p><strong>一言:</strong> $singleword</p>";
         ?>
         <form action="demoprofile.php" method="post" enctype="multipart/form-data">
             <input type="hidden" name="name" value="<?php echo $name; ?>">
             <input type="hidden" name="singleword" value="<?php echo $singleword; ?>">
-            <input type="hidden" name="icon_path" value="<?php echo $final_image; ?>">
+            <input type="hidden" name="icon_path" value="<?php echo $icon_path; ?>">
             <input type="file" accept=".jpg,.jpeg,.png,.gif" id="profile_image" name="profile_image" style="display: none;">
             <input type="submit" value="送信">
         </form>
