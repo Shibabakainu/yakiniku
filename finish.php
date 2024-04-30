@@ -21,6 +21,7 @@ require_once __DIR__ . '/nav.php';
     <p>
         上記の内容で登録されました。
     </p>
+    <button type="button" name="button" onclick="location.href='http://localhost/yakiniku/home.php'">戻る</button>
 </body>
 
 </html>

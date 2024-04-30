@@ -16,7 +16,7 @@ require_once __DIR__ . '/nav.php';
         <h3>質問投稿</h3>
         <form action="./finish.php" method="POST" enctype="multipart/form-data">
             <p>質問内容<br>
-                <textarea name="content"></textarea>
+                <textarea name="content" required></textarea>
             </p>
             <p>タグの追加</p>
             <label><input type="checkbox" value="C" name="tags"><span>#C</span></label>
