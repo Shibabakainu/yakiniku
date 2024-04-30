@@ -18,6 +18,13 @@ require_once __DIR__ . '/nav.php';
             <p>質問内容<br>
                 <textarea name="content"></textarea>
             </p>
+            <p>タグの追加</p>
+            <label><input type="checkbox" value="C" name="tags"><span>#C</span></label>
+            <label><input type="checkbox" value="Python" name="tags"><span>#Python</span></label>
+            <label><input type="checkbox" value="Java" name="tags"><span>#Java</span></label>
+            <label><input type="checkbox" value="PHP" name="tags"><span>#PHP</span></label>
+            <label><input type="checkbox" value="JavaScript" name="tags"><span>#JavaScript</span></label>
+            <label><input type="checkbox" value="HTML/CSS" name="tags"><span>#HTML/CSS</span></label>
             <p>画像<br>
                 <input type="file" name="image" accept=".jpg, .png">
             </p>
