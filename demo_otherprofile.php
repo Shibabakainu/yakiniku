@@ -48,10 +48,10 @@ require_once __DIR__ . '/nav.php'; // ルートディレクトリからの相対
         $icon_path = $_POST['icon_path'];
     } else {
         // フォームからの送信がない場合は仮のデータを表示
-        $name = "ジョリーパスタ";
-        $course = "ITエキスパート学科";
-        $singleword = "コロナは風と共に去りぬ";
-        $icon_path = "profile/profileicon/6625c9866671f.jpg"; // アイコンの画像パス
+        $name = "石より硬い岸本";
+        $course = "ITスペシャリスト学科";
+        $singleword = "リメンバーミー";
+        $icon_path = "profile/profileicon/662b12c596ba3.jpg"; // アイコンの画像パス
     }
 
 // ユーザーのデータを表示
@@ -60,10 +60,6 @@ echo "<p><strong>名前:</strong> $name</p>";
 echo "<p><strong>学科:</strong> $course</p>";
 echo "<p><strong>一言:</strong> $singleword</p>";
 ?>
-
-<!-- 編集ボタンをユーザーのデータの下に配置 -->
-<a href='identification.php' class="edit_button">編集</a>
-
 <br><br> <!-- ボタンとテーブルの間に適切な間隔を設定 -->
 
 <!-- 投稿作品一覧テーブル -->
