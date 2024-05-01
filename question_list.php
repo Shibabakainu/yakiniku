@@ -36,20 +36,41 @@ require_once __DIR__ . '/newNav.php';
     <body>
         <br>
         <p class="view_p">質問一覧</p>
-        <table border="1" style="border-collapse: collapse">
-            <tr bgcolor="#e6e6fa">
-                <td>質問タイトル</td>
-                <th>未/済</th>
-            </tr>
-            <tr>
-                <td><a href="./answer.php"><span style="color: black;">あいうえお</span></a></td>
-                <th>未回答</th>
-            </tr>
-            <tr bgcolor="#f5f5f5">
-                <td><a href="./answer.php"><span style="color: black;">abcde</span></a></td>
-                <th>回答済</th>
-            </tr>
-        </table>
+        <!-- フィルタ（ラジオボタンとラベル） -->
+        <input type="radio" name="categories" id="All" value="All" checked>
+        <input type="radio" name="categories" id="C" value="C">
+        <input type="radio" name="categories" id="Python" value="Python">
+        <input type="radio" name="categories" id="Java" value="Java">
+        <input type="radio" name="categories" id="AI" value="AI">
+        <input type="radio" name="categories" id="Web" value="Web">
+        <input type="radio" name="categories" id="AWS" value="AWS">
+
+        <div class="filters">
+            <label for="All">全て</label>
+            <label for="C">#C</label>
+            <label for="Python">#Python</label>
+            <label for="Java">#Java</label>
+            <label for="AI">#AI</label>
+            <label for="Web">#Web</label>
+            <label for="AWS">#AWS</label>
+        </div>
+
+        <div class="targets">
+            <table border="1" style="border-collapse: collapse">
+                <tr bgcolor="#e6e6fa">
+                    <td>質問タイトル</td>
+                    <th>未/済</th>
+                </tr>
+                <tr class="target" data-category="C">
+                    <td><a href="./answer.php"><span style="color: black;">C言語のループ処理について</span></a></td>
+                    <th>未回答</th>
+                </tr>
+                <tr bgcolor="#f5f5f5" class="target" data-category="AI">
+                    <td><a href="./answer.php"><span style="color: black;">機械学習について</span></a></td>
+                    <th>回答済</th>
+                </tr>
+            </table>
+        </div>
     </body>
 </html>
 
