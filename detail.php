@@ -1,5 +1,5 @@
 <?php
-require_once __DIR__ . '/nav.php';
+require_once __DIR__ . '/newNav.php';
 ?>
 
 <html>

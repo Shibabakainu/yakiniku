@@ -1,12 +1,12 @@
 <?php
-require_once __DIR__ . '/nav.php';
+require_once __DIR__ . '/newNav.php';
 ?>
 
 <!DOCTYPE html>
 <html lang="ja">
     <head>
         <meta charset="utf-8">
-        <title>プログラミング情報共有サイト</title>
+        <title>質問一覧</title>
         <link rel="stylesheet" href="styles/view.css">
         <style type="text/css">
             table{

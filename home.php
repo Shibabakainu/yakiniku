@@ -1,5 +1,5 @@
 <?php
-require_once __DIR__ . '/nav.php';
+require_once __DIR__ . '/newNav.php';
 ?>
     <head>
         <meta charset="utf-8">
@@ -21,18 +21,18 @@ require_once __DIR__ . '/nav.php';
             <div class="card">
                 <h2>作品閲覧</h2>
                 <h3>内容</h3>
-                
+
             </div>
             <div class="card">
                 <h2>アップロード</h2>
                 <h3>内容</h3>
-                
+
             </div>
             <button type="button">
                 <h2>質問</h2>
                 <h3>回答</h3>
             </button>
-            
+
         </div>
     </body>
 

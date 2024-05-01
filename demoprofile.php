@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja">
 <?php
-require_once __DIR__ . '/nav.php'; // ルートディレクトリからの相対パスでnav.phpを読み込む
+require_once __DIR__ . '/newNav.php'; // ルートディレクトリからの相対パスでnav.phpを読み込む
 ?>
 <head>
     <meta charset="UTF-8">
@@ -19,6 +19,7 @@ require_once __DIR__ . '/nav.php'; // ルートディレクトリからの相対
         body {
             margin-top: 50px;
             margin-left: 0px;
+            margin-bottom: 40px;
             padding: 0;
         }
 
@@ -31,7 +32,7 @@ require_once __DIR__ . '/nav.php'; // ルートディレクトリからの相対
             text-decoration: none;
             display: inline-block;
             font-size: 16px;
-            
+
             cursor: pointer;
             border-radius: 12px;
         }
@@ -89,6 +90,10 @@ echo "<p><strong>一言:</strong> $singleword</p>";
         }
     ?>
 </table>
+
+<?php
+require_once __DIR__ . '/footer.php';
+?>
 
 </body>
 </html>

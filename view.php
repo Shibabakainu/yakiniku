@@ -1,12 +1,12 @@
 <?php
-require_once __DIR__ . '/nav.php';
+require_once __DIR__ . '/newNav.php';
 ?>
 
 <html lang="ja">
 
 <head>
     <meta charset="utf-8">
-    <title>プログラミング情報共有サイト</title>
+    <title>作品一覧</title>
     <link rel="stylesheet" href="styles/view.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />

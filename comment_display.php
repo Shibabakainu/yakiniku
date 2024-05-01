@@ -14,10 +14,11 @@ $sql = "SELECT id, name, comment FROM comments ORDER BY id DESC";
 $result = $connect->query($sql);
 
 //コメント表示
+echo "<span class='icon' data-id='" . "'><img src='profile/profileicon/662b12c596ba3.jpg' class='profile_image' alt='icon'></span>" . "石より硬い岸本" . ":</strong>" . "いいね" . "</p>";
 if($result->num_rows > 0) {
     while($row = $result->fetch_assoc()) {
         echo "<div class='comment'>";
-        echo "<span class='icon' data-id='" . $row['id'] . "'><img src='profile/profileicon/662b12c596ba3.jpg' class='profile_image' alt='icon'></span>" . htmlspecialchars($row['name']) . ":</strong>" . htmlspecialchars($row['comment']) . "</p>";
+        echo "<span class='icon' data-id='" . $row['id'] . "'><img src='profile/profileicon/6625c9866671f.jpg' class='profile_image' alt='icon'></span>" . htmlspecialchars($row['name']) . ":</strong>" . htmlspecialchars($row['comment']) . "</p>";
         echo "</div>";
     }
 } else {

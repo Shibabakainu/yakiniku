@@ -1,8 +1,10 @@
 @charset "utf-8";
 
 body {
-    margin: 0;
+    margin: 0px;
+    margin-bottom: 30px;
 }
+
 .wrap {
     width: 80%;
     margin:auto;
@@ -18,7 +20,7 @@ h3 {
 
 .upload_p {
     font-size: 15pt;
-    margin: 10px;
+    margin: 9px;
 }
 
 textarea {

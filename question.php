@@ -1,5 +1,5 @@
 <?php
-require_once __DIR__ . '/nav.php';
+require_once __DIR__ . '/newNav.php';
 ?>
 
 <!DOCTYPE html>
@@ -7,7 +7,7 @@ require_once __DIR__ . '/nav.php';
 
 <head>
     <meta charset="utf-8">
-    <title>post</title>
+    <title>質問を投稿</title>
     <link rel="stylesheet" href="./styles/question.css">
 </head>
 
