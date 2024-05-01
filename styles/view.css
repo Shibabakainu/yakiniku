@@ -101,3 +101,50 @@ h1 {
     outline: 0;
     margin-right: 30px;
 }
+
+[value="All"]:checked ~ .targets [data-category]{
+}
+[value="C"]:checked ~ .targets .target:not([data-category~="C"]),
+[value="Python"]:checked ~ .targets .target:not([data-category~="Python"]),
+[value="Java"]:checked ~ .targets .target:not([data-category~="Java"]),
+[value="AI"]:checked ~ .targets .target:not([data-category~="AI"]),
+[value="Web"]:checked ~ .targets .target:not([data-category~="Web"]),
+[value="AWS"]:checked ~ .targets .target:not([data-category~="AWS"]) {
+    display: none;
+}
+
+input[type="radio"] {
+    position: absolute;
+    left: -9999px;
+}
+
+.filters {
+    text-align: center;
+    /*margin-left: 200px;*/
+}
+.filters * {
+    display: inline-block;
+}
+.filters label {
+    color: #333; /* 文字色を黒に */
+    background: white;
+    font-size: 14px; /* 文字サイズを14pxに */
+    border: 1px solid #333; /* 淵の線を指定 */
+    border-radius: 20px; /* 角丸を入れて、左右が丸いボタンにする */
+    padding: 5px 20px; /* 上下左右に余白をトル */
+}
+.filters label:hover {
+    background: gray;
+    color: #fff;
+}
+[value="All"]:checked ~ .filters [for="All"],
+[value="C"]:checked ~ .filters [for="C"],
+[value="Python"]:checked ~ .filters [for="Python"],
+[value="Java"]:checked ~ .filters [for="Java"],
+[value="AI"]:checked ~ .filters [for="AI"],
+[value="Web"]:checked ~ .filters [for="Web"],
+[value="AWS"]:checked ~ .filters [for="AWS"] {
+    color: #FFF; /* 文字色を白に */
+    background: gray; /* 背景色を灰色に */
+    border: 1px solid gray; /* 淵の線を灰色に */
+}
