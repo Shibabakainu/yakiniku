@@ -103,12 +103,11 @@ h1 {
 }
 
 [value="All"]:checked ~ .targets [data-category]{
-
 }
-[value="C"]:checked ~ .targets .target:not([data-category~="C"]), 
-[value="Python"]:checked ~ .targets .target:not([data-category~="Python"]), 
+[value="C"]:checked ~ .targets .target:not([data-category~="C"]),
+[value="Python"]:checked ~ .targets .target:not([data-category~="Python"]),
 [value="Java"]:checked ~ .targets .target:not([data-category~="Java"]),
-[value="AI"]:checked ~ .targets .target:not([data-category~="AI"]), 
+[value="AI"]:checked ~ .targets .target:not([data-category~="AI"]),
 [value="Web"]:checked ~ .targets .target:not([data-category~="Web"]),
 [value="AWS"]:checked ~ .targets .target:not([data-category~="AWS"]) {
     display: none;
@@ -120,7 +119,8 @@ input[type="radio"] {
 }
 
 .filters {
-    margin-left: 200px;
+    text-align: center;
+    /*margin-left: 200px;*/
 }
 .filters * {
     display: inline-block;
@@ -137,11 +137,11 @@ input[type="radio"] {
     background: gray;
     color: #fff;
 }
-[value="All"]:checked ~ .filters [for="All"], 
-[value="C"]:checked ~ .filters [for="C"], 
-[value="Python"]:checked ~ .filters [for="Python"], 
-[value="Java"]:checked ~ .filters [for="Java"], 
-[value="AI"]:checked ~ .filters [for="AI"], 
+[value="All"]:checked ~ .filters [for="All"],
+[value="C"]:checked ~ .filters [for="C"],
+[value="Python"]:checked ~ .filters [for="Python"],
+[value="Java"]:checked ~ .filters [for="Java"],
+[value="AI"]:checked ~ .filters [for="AI"],
 [value="Web"]:checked ~ .filters [for="Web"],
 [value="AWS"]:checked ~ .filters [for="AWS"] {
     color: #FFF; /* 文字色を白に */

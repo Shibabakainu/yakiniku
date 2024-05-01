@@ -30,8 +30,6 @@ require_once __DIR__ . '/newNav.php';
             font-size: 100%;
         }
 
-        .view_p {
-        }
     </style>
 </head>
 
@@ -45,7 +43,7 @@ require_once __DIR__ . '/newNav.php';
     <input type="radio" name="categories" id="AI" value="AI">
     <input type="radio" name="categories" id="Web" value="Web">
     <input type="radio" name="categories" id="AWS" value="AWS">
-    
+
     <div class="filters">
         <label for="All">全て</label>
         <label for="C">#C</label>
