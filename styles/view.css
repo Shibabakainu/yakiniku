@@ -148,3 +148,17 @@ input[type="radio"] {
     background: gray; /* 背景色を灰色に */
     border: 1px solid gray; /* 淵の線を灰色に */
 }
+
+.contentTitle {
+    text-align: left;
+    padding: 0px;
+}
+
+.contentBody {
+    text-align: left;
+    vertical-align: top;
+}
+
+.timeStamp {
+    text-align: center;
+}

@@ -61,10 +61,10 @@ require_once __DIR__ . '/newNav.php';
                 <td width="800px">記事の概要</td>
             </tr>
             <tr class="target" data-category="AI">
-                <td><a href="./detail.php"><span style="color: black;">ChatGPTに聞いてみた！</span></a></td>
-                <th>
+                <td><a href="./detail.php" class="contentTitle"><span style="color: black;">ChatGPTに聞いてみた！</span></a></td>
+                <th class="contentBody">
                     ChatGPTに今話題のデイリースクラムについて聞いてみた！
-                    <p><img src="./images/calendar(16).jpeg"> 2024/04/25</p>
+                    <p class="timeStamp"><img src="./images/calendar(16).jpeg"> 2024/04/25</p>
                     <div style="text-align: right;">
                         <button type="button" class="likeButton"> <!-- 高評価数の表示 -->
                             <span class="material-symbols-outlined">thumb_up</span><span>32</span>
@@ -76,10 +76,10 @@ require_once __DIR__ . '/newNav.php';
                 </th>
             </tr>
             <tr class="target" data-category="AI">
-                <td><a href="./detail.php"><span style="color: black;">「ゼロから始める機械学習」: 機械学習入門ガイド</span></a></td>
-                <th>
+                <td><a href="./detail.php" class="contentTitle"><span style="color: black;">「ゼロから始める機械学習」: 機械学習入門ガイド</span></a></td>
+                <th class="contentBody">
                     この記事では、機械学習の基本から応用までを解説します。アルゴリズム、データセット、モデルの選択方法などについて詳しく説明します。
-                    <p><img src="./images/calendar(16).jpeg"> 2024/03/25</p>
+                    <p class="timeStamp"><img src="./images/calendar(16).jpeg"> 2024/03/25</p>
                     <div style="text-align: right;">
                         <button type="button" class="likeButton"> <!-- 高評価数の表示 -->
                             <span class="material-symbols-outlined">thumb_up</span><span>89</span>
@@ -91,10 +91,10 @@ require_once __DIR__ . '/newNav.php';
                 </th>
             </tr>
             <tr class="target" data-category="Web">
-                <td><a href="./detail.php"><span style="color: black;">「最新のフロントエンド開発トレンド」: 2023年版</span></a></td>
-                <th>
+                <td><a href="./detail.php" class="contentTitle"><span style="color: black;">「最新のフロントエンド開発トレンド」: 2023年版</span></a></td>
+                <th class="contentBody">
                     フロントエンド開発の最新トレンドを紹介する記事です。Webコンポーネント、TypeScript、モバイルフレームワークなどに焦点を当てています。
-                    <p><img src="./images/calendar(16).jpeg"> 2024/01/04</p>
+                    <p class="timeStamp"><img src="./images/calendar(16).jpeg"> 2024/01/04</p>
                     <div style="text-align: right;">
                         <button type="button" class="likeButton"> <!-- 高評価数の表示 -->
                             <span class="material-symbols-outlined">thumb_up</span><span>12</span>
@@ -106,10 +106,10 @@ require_once __DIR__ . '/newNav.php';
                 </th>
             </tr>
             <tr class="target" data-category="AWS">
-                <td><a href="./detail.php"><span style="color: black;">「サーバーレスアーキテクチャの実践的ガイド」: AWS Lambda、Azure Functions、Google Cloud Functionsの比較</span></a></td>
-                <th>
+                <td><a href="./detail.php" class="contentTitle"><span style="color: black;">「サーバーレスアーキテクチャの実践的ガイド」: AWS Lambda、Azure Functions、Google Cloud Functionsの比較</span></a></td>
+                <th class="contentBody">
                     サーバーレスアーキテクチャの選択肢と、それぞれのプラットフォームでの実装方法を比較する記事です。関数のデプロイ、スケーリング、コストなどについて詳しく解説します。
-                    <p><img src="./images/calendar(16).jpeg"> 2023/12/25</p>
+                    <p class="timeStamp"><img src="./images/calendar(16).jpeg"> 2023/12/25</p>
                     <div style="text-align: right;">
                         <button type="button" class="likeButton"> <!-- 高評価数の表示 -->
                             <span class="material-symbols-outlined">thumb_up</span><span>56</span>

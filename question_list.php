@@ -30,6 +30,10 @@ require_once __DIR__ . '/newNav.php';
                 font-size: 300%;
                 text-align: center;
             }
+
+            .contentTitle {
+                text-align: left;
+            }
         </style>
     </head>
 
@@ -62,11 +66,11 @@ require_once __DIR__ . '/newNav.php';
                     <th>未/済</th>
                 </tr>
                 <tr class="target" data-category="C">
-                    <td><a href="./answer.php"><span style="color: black;">C言語のループ処理について</span></a></td>
+                    <td><a href="./answer.php" class="contentTitle"><span style="color: black;">C言語のループ処理について</span></a></td>
                     <th>未回答</th>
                 </tr>
                 <tr bgcolor="#f5f5f5" class="target" data-category="AI">
-                    <td><a href="./answer.php"><span style="color: black;">機械学習について</span></a></td>
+                    <td><a href="./answer.php" class="contentTitle"><span style="color: black;">機械学習について</span></a></td>
                     <th>回答済</th>
                 </tr>
             </table>
