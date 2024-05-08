@@ -18,6 +18,7 @@ require_once __DIR__ . '/newNav.php'; // ルートディレクトリからの相
 
         body {
             margin-top: 50px;
+            margin-bottom: 50px;
             margin-left: 0px;
             padding: 0;
         }
@@ -85,6 +86,39 @@ echo "<p><strong>一言:</strong> $singleword</p>";
         }
     ?>
 </table>
+<p class="view_p">回答した質問一覧</p>
+<table border="1" style="border-collapse: collapse">
+    <tr bgcolor="#e6e6fa">
+        <td width="400px">質問の内容</td>
+        <td width="800px">回答の内容</td>
+    </tr>
+    <tr>
+    <td><a href="question_detail.php"><span style="color: black;">辞書型がよくわかりません</span></a></td>
+                <th>
+                    漢と書いて男と読むみたいなことです
+                </th>
+    </tr>
+    <tr>
+    <td><a href="question_detail.php"><span style="color: black;">共に働けるイメージを沸かすしかないのでしょうか？</span></a></td>
+                <th>
+                    まさにその通り
+                </th>
+    </tr>
+    <tr>
+    <td><a href="question_detail.php"><span style="color: black;">おすすめの本を教えてください</span></a></td>
+                <th>
+                    リーダブルコードと安部公房です
+                </th>
+    </tr>
+    <td><a href="question_detail.php"><span style="color: black;">どのような愛が適切だと思いますか？(恋愛、隣人愛等)</span></a></td>
+                <th>
+                    自己愛ですね
+                </th>
+    </tr>
+</table>
 
 </body>
+<?php
+require_once __DIR__ . '/footer.php';
+?>
 </html>

@@ -1,10 +1,14 @@
 <div style="text-align: center;">
+    <p>ダウンロードされるファイル名: dummy.txt</p> 
+    <!-- ダウンロードされるファイル名を表示する要素 -->
     <button onclick="downloadFile()">ファイルをダウンロード</button>
 </div>
+
 
 <!-- JavaScriptで作成したダウンロード機能のスクリプト -->
 <script>
     function downloadFile() {
+        
         // サーバーサイドからファイルを取得するリクエストを送信
         // ()の中にサーバーサイドのファイルを所有するエンドポイントのURLを記述
         fetch('http://localhost/yakiniku/DownloadPath.php')

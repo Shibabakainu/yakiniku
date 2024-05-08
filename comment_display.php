@@ -1,3 +1,11 @@
+<style>
+.comment small {
+    display: block;
+    margin-top: 5px;
+    font-size: 12px;
+    color: #666;
+}
+</style>
 <?php
 $servername = "localhost";
 $username = "username";
@@ -10,7 +18,7 @@ if($connect->connect_error) {
     die("Connection failed: " . $connect->connect_error);
 }
 
-$sql = "SELECT id, name, comment FROM comments ORDER BY id DESC";
+$sql = "SELECT id, name, comment, timestamp FROM comments ORDER BY id DESC";
 $result = $connect->query($sql);
 
 //コメント表示
@@ -18,12 +26,13 @@ echo "<span class='icon' data-id='" . "'><img src='profile/profileicon/662b12c59
 if($result->num_rows > 0) {
     while($row = $result->fetch_assoc()) {
         echo "<div class='comment'>";
-        echo "<span class='icon' data-id='" . $row['id'] . "'><img src='profile/profileicon/6625c9866671f.jpg' class='profile_image' alt='icon'></span>" . htmlspecialchars($row['name']) . ":</strong>" . htmlspecialchars($row['comment']) . "</p>";
+        echo "<span class='icon' data-id='" . $row['id'] . "'><img src='profile/profileicon/6625c9866671f.jpg' class='profile_image' alt='icon'></span>" . htmlspecialchars($row['name']) . "<br><div class='comment-text' style='margin-left: 29px;'>" . htmlspecialchars($row['comment']) . "</div><small>投稿日時: " . $row['timestamp'] . "</small>";
         echo "</div>";
     }
 } else {
     echo "まだコメントはありません。";
 }
+echo "</div>";
 
 $connect->close();
 ?>
