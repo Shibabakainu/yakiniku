@@ -44,8 +44,8 @@ require_once __DIR__ . '/newNav.php';
 
     <script>
         // アイコンがクリックされたときの処理
-        document.querySelectorAll('.icon img.profile_image').forEach(icon => {
-            icon.addEventListener('click', function() {
+        document.querySelectorAll('.profile_image').forEach(icon => {
+        icon.addEventListener('click', function() {
                 const commentId = this.parentElement.getAttribute('data-id');
                 window.location.href = 'demo_otherprofile.php?id=' + commentId;
             });
