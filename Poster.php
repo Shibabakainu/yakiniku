@@ -14,7 +14,7 @@ require_once __DIR__ . '/newNav.php';
 <body>
 
 
-    <h2 class="poster_h2">C言語のループ処理について</h2>
+    <h2 class="poster_h2">pythonの課題について</h2>
     <p>回答一覧</p>
 
     <div class="targets">

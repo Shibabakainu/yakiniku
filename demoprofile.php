@@ -106,7 +106,7 @@ require_once __DIR__ . '/newNav.php'; // ルートディレクトリからの相
             <td width="800px">質問の内容</td>
         </tr>
         <tr>
-            <td><a href="question_detail.php"><span style="color: black;">pythonの課題について</span></a></td>
+            <td><a href="Poster.php"><span style="color: black;">pythonの課題について</span></a></td>
             <th>
                 辞書型がよくわかりません
             </th>
