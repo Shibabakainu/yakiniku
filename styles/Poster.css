@@ -1,0 +1,58 @@
+.poster_h2 {
+    margin-top: 70px;
+}
+
+p {
+    margin-top: 30px;
+    font-size: 20px;
+}
+
+.main {
+    text-align: left;
+    line-height: 50px;
+    margin-right: 570px;
+    margin-top: auto;
+}
+
+
+
+table {
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+tr {
+    height: 100px;
+    text-align: center;
+}
+
+td {
+    width: 1100px;
+}
+
+.view_p {
+    font-size: 300%;
+    text-align: center;
+}
+
+.return_button {
+    margin-bottom: 30px;
+}
+
+img.profile_image {
+    max-width: 70px;
+    /* 最大幅を設定 */
+    max-height: 70px;
+    /* 最大高さを設定 */
+    width: 200px;
+    /* 幅を自動調整:auto */
+    height: 70px;
+    /* 高さを自動調整:auto */
+    object-fit: cover;
+    /* 画像を保持し、アスペクト比を維持しつつ要素全体にスケーリング */
+    border-radius: 50%;
+    /* 円形にする */
+    float: left;
+    margin-right: 50px;
+}
