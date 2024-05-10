@@ -10,12 +10,20 @@ require_once __DIR__ . '/newNav.php';
     <title>投稿者質問詳細</title>
     <link rel="stylesheet" href="styles/Poster.css">
 </head>
-
+<style>
+    body {
+            margin-top: 50px;
+            margin-bottom: 50px;
+            margin-left: 0px;
+            padding: 0;
+        }
+    
+</style>
 <body>
 
 
-    <h2 class="poster_h2">C言語のループ処理について</h2>
-    <p>回答一覧</p>
+    <h2 class="poster_h2">pythonの課題について</h2>
+    <h3>回答一覧</h3>
 
     <div class="targets">
         <table border="1" style="border-collapse: collapse">
@@ -55,9 +63,8 @@ require_once __DIR__ . '/newNav.php';
 
 
 </body>
-
-</html>
-
 <?php
 require_once __DIR__ . '/footer.php';
 ?>
+</html>
+

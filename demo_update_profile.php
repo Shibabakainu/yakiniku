@@ -32,7 +32,7 @@ if(isset($_FILES["profile_image"]["tmp_name"]) && $_FILES["profile_image"]["tmp_
 
 <!DOCTYPE html>
 <html lang="ja">
-<?php require_once __DIR__ . '/nav.php'; // ナビゲーションバーのインクルード ?>
+<?php require_once __DIR__ . '/newnav.php'; // ナビゲーションバーのインクルード ?>
 <head>
     <meta charset="UTF-8">
     <title>プロフィール確認画面</title>
@@ -96,4 +96,7 @@ if(isset($_FILES["profile_image"]["tmp_name"]) && $_FILES["profile_image"]["tmp_
     </form>
 </div>
 </body>
+<?php
+require_once __DIR__ . '/footer.php';
+?>
 </html>

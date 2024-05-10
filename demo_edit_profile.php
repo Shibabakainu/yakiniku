@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja">
 <?php
-require_once __DIR__ . '/nav.php'; // ナビゲーションバーのインクルード
+require_once __DIR__ . '/newnav.php'; // ナビゲーションバーのインクルード
 ?>
 <head>
     <meta charset="UTF-8">
@@ -78,4 +78,7 @@ require_once __DIR__ . '/nav.php'; // ナビゲーションバーのインクル
         }
     </script>
 </body>
+<?php
+require_once __DIR__ . '/footer.php';
+?>
 </html>
