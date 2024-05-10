@@ -29,8 +29,8 @@ require_once __DIR__ . '/newNav.php';
         <table border="1" style="border-collapse: collapse">
             <tr class="target" data-category="C">
                 <td>
-                    <img src="profile/profileicon/6625c9866671f.jpg" class='profile_image'>
-                    <p class="main">ジョリーパスタ<br>こんなやり方はどうでしょう。........</p>
+                    <img src="images/ebi.jpeg" class='profile_image'>
+                    <p class="main">限りなくエビ<br>こんなやり方はどうでしょう。........</p>
                 </td>
             </tr>
             <tr bgcolor="#f5f5f5" class="target" data-category="AI">
@@ -53,7 +53,7 @@ require_once __DIR__ . '/newNav.php';
     <script>
         // アイコンがクリックされたときの処理
         document.querySelectorAll('.profile_image').forEach(icon => {
-        icon.addEventListener('click', function() {
+            icon.addEventListener('click', function() {
                 const commentId = this.parentElement.getAttribute('data-id');
                 window.location.href = 'demo_otherprofile.php?id=' + commentId;
             });
