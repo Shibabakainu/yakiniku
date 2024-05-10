@@ -17,7 +17,8 @@ footer {
 }
 
 .right {
-    margin-left: 1250px;
+    float: right;
+    margin-right: 30px;
     margin-top: -30px; /* ボタンを上に5px移動 */
 }
 
