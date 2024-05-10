@@ -15,20 +15,18 @@ require_once __DIR__ . '/newNav.php';
     <div class="wrap">
         <h3>質問投稿</h3>
         <form action="./finish.php" method="POST" enctype="multipart/form-data">
-            <p>質問内容<br>
-                <textarea name="content" required></textarea>
-            </p>
-            <p>タグの追加</p>
+            <h4>質問内容</h4>
+            <textarea name="content" required></textarea>
+            <h4>タグの追加</h4>
             <label><input type="checkbox" value="C" name="tags"><span>#C</span></label>
             <label><input type="checkbox" value="Python" name="tags"><span>#Python</span></label>
             <label><input type="checkbox" value="Java" name="tags"><span>#Java</span></label>
             <label><input type="checkbox" value="PHP" name="tags"><span>#PHP</span></label>
             <label><input type="checkbox" value="JavaScript" name="tags"><span>#JavaScript</span></label>
             <label><input type="checkbox" value="HTML/CSS" name="tags"><span>#HTML/CSS</span></label>
-            <p>画像<br>
-                <input type="file" name="image" accept=".jpg, .png">
-            </p>
-            <button type="submit" class="submit" formaction="http://localhost/yakiniku/finish.php">投稿</button>
+            <h4>画像</h4>
+            <input type="file" name="image" accept=".jpg, .png"><br>
+            <button type="submit" class="submit_button" formaction="http://localhost/yakiniku/finish.php">投稿</button>
         </form>
     </div>
 </body>

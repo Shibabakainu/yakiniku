@@ -18,9 +18,19 @@ h3 {
     font-weight: bold;
 }
 
-.upload_p {
-    font-size: 15pt;
-    margin: 9px;
+.submit_button {
+    margin: 30px 0 50px 0;
+    width: 150px;
+    height: 60px;
+    font-size: 15px;
+    color: white;
+    background: #5D99FF;
+    border: #5D99FF;
+    transition: 0.5s ease;
+}
+
+.submit_button:hover {
+    background: #2C7CFF;
 }
 
 textarea {
