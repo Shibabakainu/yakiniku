@@ -5,6 +5,9 @@
     font-size: 12px;
     color: #666;
 }
+body{
+    margin-bottom: 50px;
+}
 </style>
 <script>
     // 順序を変更する関数
