@@ -69,7 +69,7 @@ require_once __DIR__ . '/newNav.php';
         </table>
     </div>
 
-    <input type="button" class="answer_button" onclick="location.href='./view.php'" value="回答する">
+    <input type="button" class="answer_button" onclick="location.href='./answer_submit.php'" value="回答する">
 
     <script>
         // アイコンがクリックされたときの処理

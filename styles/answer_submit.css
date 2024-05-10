@@ -1,0 +1,42 @@
+@charset "utf-8";
+
+body {
+    margin: 0px;
+    margin-bottom: 30px;
+}
+
+.wrap {
+    width: 80%;
+    margin:auto;
+    background-color: #c4e4f5;
+    padding: 50px 0 0 30px;
+    height: 100%;
+}
+
+h3 {
+    font-size: 24pt;
+    font-weight: bold;
+}
+
+
+textarea {
+    font-size: 12pt;
+    resize: none;
+    width: 350px;
+    height: 100px;
+}
+
+.answer_button {
+    margin: 30px 0 50px 0;
+    width: 150px;
+    height: 60px;
+    font-size: 15px;
+    color: white;
+    background: #5D99FF;
+    border: #5D99FF;
+    transition: 0.5s ease;
+}
+
+.answer_button:hover {
+    background: #2C7CFF;
+}
