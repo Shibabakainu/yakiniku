@@ -1,0 +1,146 @@
+.h1 {
+    margin-top: 60px;
+    margin-bottom: 40px;
+    margin-left: 10px;
+}
+
+.h2 {
+    margin-top: 80px;
+}
+
+
+
+
+/*質問者・ベストアンサーの調整*/
+
+/*アイコン画像*/
+.profile_icon {
+    max-width: 70px;
+    /* 最大幅を設定 */
+    max-height: 70px;
+    /* 最大高さを設定 */
+    width: 200px;
+    /* 幅を自動調整:auto */
+    height: 70px;
+    /* 高さを自動調整:auto */
+    object-fit: cover;
+    /* 画像を保持し、アスペクト比を維持しつつ要素全体にスケーリング */
+    border-radius: 50%;
+    /* 円形にする */
+    float: left;
+    margin-left: 20px;
+}
+
+/*名前*/
+.icon {
+    margin-top: 55px;
+    margin-left: 100px;
+    font-size: 19px;
+}
+
+.icon_2 {
+    margin-top: 40px;
+    margin-left: 100px;
+    font-size: 19px;
+}
+
+/*タイムスタンプ*/
+.day {
+    margin-left: 100px;
+    font-size: 12px;
+}
+
+.box {
+    padding: 10px 0px;
+    margin: 10px;
+    color: #232323;
+    background: #fff8e8;
+    border-left: solid 15px #ffc06e;
+}
+
+.box2 {
+    padding: 10px 0px;
+    margin: 10px;
+    color: #232323;
+    background: #e4fcff;
+    border-left: solid 15px #1dc1d6;
+}
+
+/*本文*/
+.text {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 80px;
+    font-size: 18px;
+}
+
+/*画像*/
+.image {
+    margin-left: 80px;
+}
+
+
+table {
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+tr {
+    height: 100px;
+    text-align: center;
+}
+
+td {
+    width: 1100px;
+}
+
+.view_p {
+    font-size: 300%;
+    text-align: center;
+}
+
+
+/*回答者のアイコン画像*/
+img.profile_image {
+    max-width: 70px;
+    /* 最大幅を設定 */
+    max-height: 70px;
+    /* 最大高さを設定 */
+    width: 200px;
+    /* 幅を自動調整:auto */
+    height: 70px;
+    /* 高さを自動調整:auto */
+    object-fit: cover;
+    /* 画像を保持し、アスペクト比を維持しつつ要素全体にスケーリング */
+    border-radius: 50%;
+    /* 円形にする */
+    float: left;
+    margin-right: 50px;
+
+}
+
+/*質問回答者のアイコンと本文*/
+.main {
+    text-align: left;
+    line-height: 50px;
+    margin-right: 570px;
+    margin-top: auto;
+}
+
+/*回答ボタン*/
+.answer_button {
+    margin-bottom: 60px;
+    margin-left: 70px;
+    width: 150px;
+    height: 60px;
+    font-size: 15px;
+    color: white;
+    background: #5D99FF;
+    border: #5D99FF;
+    transition: .3s;
+}
+
+.answer_button:hover {
+    background: #2C7CFF;
+}
