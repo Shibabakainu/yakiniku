@@ -12,13 +12,13 @@ require_once __DIR__ . '/newNav.php';
 </head>
 <style>
     body {
-            margin-top: 50px;
-            margin-bottom: 50px;
-            margin-left: 0px;
-            padding: 0;
-        }
-
+        margin-top: 50px;
+        margin-bottom: 50px;
+        margin-left: 0px;
+        padding: 0;
+    }
 </style>
+
 <body>
 
 
@@ -32,7 +32,7 @@ require_once __DIR__ . '/newNav.php';
                     <img src="images/ebi.jpeg" class='profile_image'>
                     <p class="main">限りなくエビ<br>こんなやり方はどうでしょう。........</p>
                     <?php
-                        require __DIR__ . '/bestanswer_button.php';
+                    require __DIR__ . '/bestanswer_button.php';
                     ?>
                 </td>
             </tr>
@@ -41,7 +41,7 @@ require_once __DIR__ . '/newNav.php';
                     <img src="profile\profileicon\662b12c596ba3.jpg" class='profile_image'>
                     <p class="main">石より硬い岸本<br>私はこの方法で解決しました。........</p>
                     <?php
-                        require __DIR__ . '/bestanswer_button.php';
+                    require __DIR__ . '/bestanswer_button.php';
                     ?>
                 </td>
             </tr>
@@ -50,14 +50,14 @@ require_once __DIR__ . '/newNav.php';
                     <img src="profile/profileicon/6628913fb7d1d.jpg" class='profile_image'>
                     <p class="main">灰色の仏像<br>むずかしいですよね。私は、........</p>
                     <?php
-                        require __DIR__ . '/bestanswer_button.php';
+                    require __DIR__ . '/bestanswer_button.php';
                     ?>
                 </td>
             </tr>
         </table>
     </div>
 
-    <input type="button" class="return_button" onclick="location.href='./view.php'" value="戻る">
+    <input type="button" class="return_button" onclick="location.href='./demoprofile.php'" value="戻る">
 
     <script>
         // アイコンがクリックされたときの処理
@@ -75,5 +75,5 @@ require_once __DIR__ . '/newNav.php';
 <?php
 require_once __DIR__ . '/footer.php';
 ?>
-</html>
 
+</html>
