@@ -49,6 +49,13 @@
     margin-left: 100px;
     font-size: 12px;
 }
+/* コメント用タイムスタンプ */
+.time {
+    display: block;
+    margin-top: 5px;
+    font-size: 12px;
+    color: #666;
+}
 
 .box {
     padding: 10px 0px;

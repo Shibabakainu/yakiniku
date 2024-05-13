@@ -51,19 +51,32 @@ require_once __DIR__ . '/newNav.php';
             <tr class="target">
                 <td>
                     <img src="profile/profileicon/6628913fb7d1d.jpg" class='profile_image'>
-                    <p class="main">灰色の仏像<br>こんなやり方はどうでしょう。........</p>
+                    <p class="main">灰色の仏像<br></p>
+                    <p class="main">こんなやり方はどうでしょう。........</p>
+                    <?php
+                        require __DIR__ . '/GoodCountButton1.php';
+                    ?>
+                    <p class="time">投稿日時: 2024-05-01 13:23:52</p>
                 </td>
             </tr>
             <tr class="target">
                 <td>
                     <img src="profile\profileicon\662b12c596ba3.jpg" class='profile_image'>
                     <p class="main">石より硬い岸本<br>私はこの方法で解決しました。........</p>
+                    <?php
+                        require __DIR__ . '/GoodCountButton2.php';
+                    ?>
+                    <p class="time">投稿日時: 2024-05-02 11:14:22</p>
                 </td>
             </tr>
             <tr class="target">
                 <td>
                     <img src="images/ebi.jpeg" class='profile_image'>
                     <p class="main">限りなくエビ<br>私も苦手です。........</p>
+                    <?php
+                        require __DIR__ . '/GoodCountButton3.php';
+                    ?>
+                    <p class="time">投稿日時: 2024-05-03 16:12:36</p>
                 </td>
             </tr>
         </table>
