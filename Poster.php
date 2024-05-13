@@ -17,7 +17,7 @@ require_once __DIR__ . '/newNav.php';
             margin-left: 0px;
             padding: 0;
         }
-    
+
 </style>
 <body>
 
@@ -31,18 +31,27 @@ require_once __DIR__ . '/newNav.php';
                 <td>
                     <img src="images/ebi.jpeg" class='profile_image'>
                     <p class="main">限りなくエビ<br>こんなやり方はどうでしょう。........</p>
+                    <?php
+                        require __DIR__ . '/bestanswer_button.php';
+                    ?>
                 </td>
             </tr>
             <tr bgcolor="#f5f5f5" class="target" data-category="AI">
                 <td>
                     <img src="profile\profileicon\662b12c596ba3.jpg" class='profile_image'>
                     <p class="main">石より硬い岸本<br>私はこの方法で解決しました。........</p>
+                    <?php
+                        require __DIR__ . '/bestanswer_button.php';
+                    ?>
                 </td>
             </tr>
             <tr bgcolor="#f5f5f5" class="target" data-category="AI">
                 <td>
                     <img src="profile/profileicon/6628913fb7d1d.jpg" class='profile_image'>
                     <p class="main">灰色の仏像<br>むずかしいですよね。私は、........</p>
+                    <?php
+                        require __DIR__ . '/bestanswer_button.php';
+                    ?>
                 </td>
             </tr>
         </table>
