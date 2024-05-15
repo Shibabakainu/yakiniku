@@ -79,6 +79,7 @@ require_once __DIR__ . '/newNav.php';
                     <p class="time">投稿日時: 2024-05-03 16:12:36</p>
                 </td>
             </tr>
+            <?php include 'answer_comments_display.php'; ?>
         </table>
     </div>
 
