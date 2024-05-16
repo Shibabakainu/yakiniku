@@ -13,9 +13,9 @@
         .wrap {
             width: 80%;
             margin: auto;
-            padding: 1px 0 50px 50px;
+            padding: 1px 0 50px 0px;
             background-color: #c4e4f5;
-            height: 200%;
+            height: 100%;
         }
         #profile_image_preview {
             max-width: 200px; /* 最大幅を設定 */

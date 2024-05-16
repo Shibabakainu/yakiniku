@@ -26,11 +26,6 @@ require_once __DIR__ . '/newNav.php';
                 font-size: 25px;
                 width: 100px;
             }
-            .view_p{
-                font-size: 300%;
-                text-align: center;
-            }
-
             .contentTitle {
                 text-align: left;
             }
@@ -38,8 +33,8 @@ require_once __DIR__ . '/newNav.php';
     </head>
 
     <body>
-        <br>
-        <p class="view_p">質問一覧</p>
+        <div class="wrap">
+        <h1>質問一覧</h1>
         <!-- フィルタ（ラジオボタンとラベル） -->
         <input type="radio" name="categories" id="All" value="All" checked>
         <input type="radio" name="categories" id="C" value="C">
@@ -65,7 +60,7 @@ require_once __DIR__ . '/newNav.php';
                     <td>質問タイトル</td>
                     <th>未/済</th>
                 </tr>
-                <tr class="target" data-category="C">
+                <tr bgcolor="#ffffff" class="target" data-category="C">
                     <td><a href="./answer.php" class="contentTitle"><span style="color: black;">C言語のループ処理について</span></a></td>
                     <th>未回答</th>
                 </tr>
@@ -74,6 +69,7 @@ require_once __DIR__ . '/newNav.php';
                     <th>回答済</th>
                 </tr>
             </table>
+        </div>
         </div>
     </body>
 </html>

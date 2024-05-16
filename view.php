@@ -34,6 +34,7 @@ require_once __DIR__ . '/newNav.php';
 </head>
 
 <body>
+    <div class="wrap">
     <h1>記事一覧</h1>
     <!-- フィルタ（ラジオボタンとラベル） -->
     <input type="radio" name="categories" id="All" value="All" checked>
@@ -60,7 +61,7 @@ require_once __DIR__ . '/newNav.php';
                 <td width="400px">タイトル</td>
                 <td width="800px">記事の概要</td>
             </tr>
-            <tr class="target" data-category="AI">
+            <tr class="target" data-category="AI" bgcolor="#ffffff">
                 <td><a href="./detail.php" class="contentTitle"><span style="color: black;">ChatGPTに聞いてみた！</span></a></td>
                 <th class="contentBody">
                     ChatGPTに今話題のデイリースクラムについて聞いてみた！
@@ -75,7 +76,7 @@ require_once __DIR__ . '/newNav.php';
                     </div>
                 </th>
             </tr>
-            <tr class="target" data-category="AI">
+            <tr class="target" data-category="AI" bgcolor="#ffffff">
                 <td><a href="./detail.php" class="contentTitle"><span style="color: black;">「ゼロから始める機械学習」: 機械学習入門ガイド</span></a></td>
                 <th class="contentBody">
                     この記事では、機械学習の基本から応用までを解説します。アルゴリズム、データセット、モデルの選択方法などについて詳しく説明します。
@@ -90,7 +91,7 @@ require_once __DIR__ . '/newNav.php';
                     </div>
                 </th>
             </tr>
-            <tr class="target" data-category="Web">
+            <tr class="target" data-category="Web" bgcolor="#ffffff">
                 <td><a href="./detail.php" class="contentTitle"><span style="color: black;">「最新のフロントエンド開発トレンド」: 2023年版</span></a></td>
                 <th class="contentBody">
                     フロントエンド開発の最新トレンドを紹介する記事です。Webコンポーネント、TypeScript、モバイルフレームワークなどに焦点を当てています。
@@ -105,7 +106,7 @@ require_once __DIR__ . '/newNav.php';
                     </div>
                 </th>
             </tr>
-            <tr class="target" data-category="AWS">
+            <tr class="target" data-category="AWS" bgcolor="#ffffff">
                 <td><a href="./detail.php" class="contentTitle"><span style="color: black;">「サーバーレスアーキテクチャの実践的ガイド」: AWS Lambda、Azure Functions、Google Cloud Functionsの比較</span></a></td>
                 <th class="contentBody">
                     サーバーレスアーキテクチャの選択肢と、それぞれのプラットフォームでの実装方法を比較する記事です。関数のデプロイ、スケーリング、コストなどについて詳しく解説します。
@@ -121,6 +122,7 @@ require_once __DIR__ . '/newNav.php';
                 </th>
             </tr>
         </table>
+    </div>
     </div>
 </body>
 

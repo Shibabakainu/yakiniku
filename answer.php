@@ -12,6 +12,7 @@ require_once __DIR__ . '/newNav.php';
 </head>
 
 <body>
+    <div class="wrap">
     <h1 class="h1">C言語のループ処理について</h1>
     <td>
         <img src="profile/profileicon/6625c9866671f.jpg" class='profile_icon'>
@@ -48,7 +49,7 @@ require_once __DIR__ . '/newNav.php';
 
     <div class="targets">
         <table border="1" style="border-collapse: collapse">
-            <tr class="target">
+            <tr class="target" bgcolor="#ffffff">
                 <td>
                     <img src="profile/profileicon/6628913fb7d1d.jpg" class='profile_image'>
                     <p class="main">灰色の仏像<br></p>
@@ -59,7 +60,7 @@ require_once __DIR__ . '/newNav.php';
                     <p class="time">投稿日時: 2024-05-01 13:23:52</p>
                 </td>
             </tr>
-            <tr class="target">
+            <tr class="target" bgcolor="#ffffff">
                 <td>
                     <img src="profile\profileicon\662b12c596ba3.jpg" class='profile_image'>
                     <p class="main">石より硬い岸本<br>私はこの方法で解決しました。........</p>
@@ -69,7 +70,7 @@ require_once __DIR__ . '/newNav.php';
                     <p class="time">投稿日時: 2024-05-02 11:14:22</p>
                 </td>
             </tr>
-            <tr class="target">
+            <tr class="target" bgcolor="#ffffff">
                 <td>
                     <img src="images/ebi.jpeg" class='profile_image'>
                     <p class="main">限りなくエビ<br>私も苦手です。........</p>
@@ -94,7 +95,7 @@ require_once __DIR__ . '/newNav.php';
             });
         });
     </script>
-
+    </div>
 </body>
 
 
