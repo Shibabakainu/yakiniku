@@ -66,7 +66,7 @@
             ?>
             <input type="submit" value="ログイン">
         </form>
-        <a href="profile/profile.php">新規作成</a>
+        <a href="profile/register.php">新規作成</a>
 
     </div>
 </body>

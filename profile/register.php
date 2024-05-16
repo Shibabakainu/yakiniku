@@ -6,8 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>プロフィール設定</title>
     <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
         .wrap {
             width: 80%;
+            margin: auto;
+            padding: 1px 0 50px 50px;
+            background-color: #c4e4f5;
+            height: 200%;
         }
         #profile_image_preview {
             max-width: 200px; /* 最大幅を設定 */
@@ -40,8 +48,8 @@
             <label for="course">学科:</label><br>
             <select id="course" name="course">
                 <option value="ITエキスパート学科">ITエキスパート学科</option>
-                <option value="ゲーム学科">ゲーム学科</option>
-                <option value="建築学科">建築学科</option>
+                <option value="ITスペシャリスト学科">ITスペシャリスト学科</option>
+                <option value="情報処理学科">情報処理学科</option>
                 <!-- 必要な学科を追加 -->
             </select><br><br>
 
