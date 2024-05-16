@@ -8,6 +8,10 @@
     <style>
         .wrap {
             width: 80%;
+            margin: auto;
+            background-color: #c4e4f5;
+            padding: 50px 0 0 30px;
+            height: 100%;
         }
         #profile_image_preview {
             max-width: 200px; /* 最大幅を設定 */

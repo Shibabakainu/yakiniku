@@ -43,10 +43,19 @@ require_once __DIR__ . '/newNav.php'; // ルートディレクトリからの相
             cursor: pointer;
             border-radius: 12px;
         }
+
+        .wrap {
+            width: 80%;
+            margin: auto;
+            background-color: #c4e4f5;
+            padding: 50px 0 0 30px;
+            height: 100%;
+        }
     </style>
 </head>
 
 <body>
+    <div class="wrap">
     <?php
     // フォームからの送信があるかどうかをチェック
     if (isset($_POST['name']) && isset($_POST['singleword']) && isset($_POST['icon_path'])) {
@@ -85,7 +94,7 @@ require_once __DIR__ . '/newNav.php'; // ルートディレクトリからの相
         <?php
         for ($i = 0; $i < 4; $i++) {
             if ($i % 2 == 0) {
-                echo "<tr>";
+                echo "<tr bgcolor=" . "#ffffff" .">";
                 echo '<td><a href="./detail.php"><span style="color: black;">あいうえお</span></a></td>';   // タイトル
                 echo "<th>あかさたなはまやらわ</th>";   // 作品詳細
                 echo "</tr>";
@@ -105,31 +114,32 @@ require_once __DIR__ . '/newNav.php'; // ルートディレクトリからの相
             <td width="400px">タイトル</td>
             <td width="800px">質問の内容</td>
         </tr>
-        <tr>
+        <tr bgcolor="ffffff">
             <td><a href="Poster.php"><span style="color: black;">pythonの課題について</span></a></td>
             <th>
                 辞書型がよくわかりません
             </th>
         </tr>
-        <tr>
+        <tr bgcolor="f5f5f5">
             <td><a href="question_detail.php"><span style="color: black;">「急募」就活の必勝法</span></a></td>
             <th>
                 共に働けるイメージを沸かすしかないのでしょうか？
             </th>
         </tr>
-        <tr>
+        <tr bgcolor="ffffff">
             <td><a href="question_detail.php"><span style="color: black;">おすすめの本を教えてください</span></a></td>
             <th>
                 おすすめの本を教えてください
             </th>
         </tr>
+        <tr bgcolor="f5f5f5">
         <td><a href="question_detail.php"><span style="color: black;">AIに愛を教えたい</span></a></td>
         <th>
             どのような愛が適切だと思いますか？(恋愛、隣人愛等)
         </th>
         </tr>
     </table>
-
+    </div>
 </body>
 <?php
 require_once __DIR__ . '/footer.php';

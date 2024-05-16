@@ -150,3 +150,11 @@ img.profile_image {
 .answer_button:hover {
     background: #2C7CFF;
 }
+
+.wrap {
+    width: 80%;
+    margin: auto;
+    background-color: #c4e4f5;
+    padding: 50px 0 0 30px;
+    height: 100%;
+}
