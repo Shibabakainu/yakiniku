@@ -27,6 +27,7 @@ require_once __DIR__ . '/newNav.php'; // ルートディレクトリからの相
             margin-top: 50px;
             margin-bottom: 50px;
             margin-left: 0px;
+            margin-right: 0px;
             padding: 0;
         }
 
@@ -44,45 +45,60 @@ require_once __DIR__ . '/newNav.php'; // ルートディレクトリからの相
             border-radius: 12px;
         }
 
+        .edit_button:hover {
+            background-color: green;
+            border: none;
+            color: white;
+
+            cursor: pointer;
+            border-radius: 12px;
+        }
         .wrap {
-            width: 80%;
-            margin: auto;
+            /*width: 80%;
+            margin: auto;*/
             background-color: #c4e4f5;
-            padding: 50px 0 0 30px;
+            padding: 50px 30px 30px 30px;
             height: 100%;
+        }
+
+        .profile {
+            text-align: center;
         }
     </style>
 </head>
 
 <body>
     <div class="wrap">
-    <?php
-    // フォームからの送信があるかどうかをチェック
-    if (isset($_POST['name']) && isset($_POST['singleword']) && isset($_POST['icon_path'])) {
-        // フォームからの送信がある場合は送信されたデータを表示
-        $name = $_POST['name'];
-        $course = "ITエキスパート学科";
-        $singleword = $_POST['singleword'];
-        $icon_path = $_POST['icon_path'];
-    } else {
-        // フォームからの送信がない場合は仮のデータを表示
-        $name = "ジョリーパスタ";
-        $course = "ITエキスパート学科";
-        $singleword = "コロナは風と共に去りぬ";
-        $icon_path = "profile/profileicon/6625c9866671f.jpg"; // アイコンの画像パス
-    }
+        <div class="profile">
+            <?php
+            // フォームからの送信があるかどうかをチェック
+            if (isset($_POST['name']) && isset($_POST['singleword']) && isset($_POST['icon_path'])) {
+                // フォームからの送信がある場合は送信されたデータを表示
+                $name = $_POST['name'];
+                $course = "ITエキスパート学科";
+                $singleword = $_POST['singleword'];
+                $icon_path = $_POST['icon_path'];
+            } else {
+                // フォームからの送信がない場合は仮のデータを表示
+                $name = "ジョリーパスタ";
+                $course = "ITエキスパート学科";
+                $singleword = "コロナは風と共に去りぬ";
+                $icon_path = "profile/profileicon/6625c9866671f.jpg"; // アイコンの画像パス
+            }
 
-    // ユーザーのデータを表示
-    echo "<p><strong>アイコン:</strong><br><img src='$icon_path' class='profile_image'></p>";
-    echo "<p><strong>名前:</strong> $name</p>";
-    echo "<p><strong>学科:</strong> $course</p>";
-    echo "<p><strong>一言:</strong> $singleword</p>";
-    ?>
+            // ユーザーのデータを表示
+            echo "<p><strong>アイコン:</strong><br><img src='$icon_path' class='profile_image'></p>";
+            echo "<p><strong>名前:</strong> $name</p>";
+            echo "<p><strong>学科:</strong> $course</p>";
+            echo "<p><strong>一言:</strong> $singleword</p>";
+            ?>
 
-    <!-- 編集ボタンをユーザーのデータの下に配置 -->
-    <a href='identification.php' class="edit_button">編集</a>
+            <!-- 編集ボタンをユーザーのデータの下に配置 -->
+            <a href='identification.php' class="edit_button">編集</a>
 
-    <br><br> <!-- ボタンとテーブルの間に適切な間隔を設定 -->
+            <br><br> <!-- ボタンとテーブルの間に適切な間隔を設定 -->
+
+        </div>
 
     <!-- 投稿作品一覧テーブル -->
     <p class="view_p">投稿作品一覧</p>
