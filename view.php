@@ -29,7 +29,6 @@ require_once __DIR__ . '/newNav.php';
         th {
             font-size: 100%;
         }
-
     </style>
 </head>
 
@@ -64,7 +63,7 @@ require_once __DIR__ . '/newNav.php';
             <tr class="target" data-category="AI" bgcolor="#ffffff">
                 <td><a href="./detail.php" class="contentTitle"><span style="color: black;">ChatGPTに聞いてみた！</span></a></td>
                 <th class="contentBody">
-                    ChatGPTに今話題のデイリースクラムについて聞いてみた！
+                    ChatGPTに今話題のスクラム開発について聞いてみた！
                     <p class="timeStamp"><img src="./images/calendar(16).jpeg"> 2024/04/25</p>
                     <div style="text-align: right;">
                         <button type="button" class="likeButton"> <!-- 高評価数の表示 -->
@@ -117,6 +116,51 @@ require_once __DIR__ . '/newNav.php';
                         </button>
                         <button type="button" class="commentButton"> <!-- コメント数の表示 -->
                             <span class="material-symbols-outlined">comment</span><span>4</span>
+                        </button>
+                    </div>
+                </th>
+            </tr>
+            <tr class="target" data-category="C">
+                <td><a href="./detail.php" class="contentTitle"><span style="color: black;">初心者向けC言語入門ガイド</span></a></td>
+                <th class="contentBody">
+                    本記事は、プログラミング初心者向けにC言語の基本を解説する入門ガイドです。
+                    <p class="timeStamp"><img src="./images/calendar(16).jpeg"> 2023/12/14</p>
+                    <div style="text-align: right;">
+                        <button type="button" class="likeButton"> <!-- 高評価数の表示 -->
+                            <span class="material-symbols-outlined">thumb_up</span><span>63</span>
+                        </button>
+                        <button type="button" class="commentButton"> <!-- コメント数の表示 -->
+                            <span class="material-symbols-outlined">comment</span><span>11</span>
+                        </button>
+                    </div>
+                </th>
+            </tr>
+            <tr class="target" data-category="Python">
+                <td><a href="./detail.php" class="contentTitle"><span style="color: black;">Pythonで実現する効率的なデータサイエンス</span></a></td>
+                <th class="contentBody">
+                    Pythonの持つ豊富な機能を駆使して効率的にデータサイエンスを行う方法を解説します。
+                    <p class="timeStamp"><img src="./images/calendar(16).jpeg"> 2023/11/22</p>
+                    <div style="text-align: right;">
+                        <button type="button" class="likeButton"> <!-- 高評価数の表示 -->
+                            <span class="material-symbols-outlined">thumb_up</span><span>74</span>
+                        </button>
+                        <button type="button" class="commentButton"> <!-- コメント数の表示 -->
+                            <span class="material-symbols-outlined">comment</span><span>12</span>
+                        </button>
+                    </div>
+                </th>
+            </tr>
+            <tr class="target" data-category="Java">
+                <td><a href="./detail.php" class="contentTitle"><span style="color: black;">Javaによる効率的な並行プログラミング</span></a></td>
+                <th class="contentBody">
+                    Javaには、複数の処理を同時に行うための強力な機能があります。本記事では、Javaを使って効率的に並行プログラミングを行う方法を解説します。
+                    <p class="timeStamp"><img src="./images/calendar(16).jpeg"> 2023/10/19</p>
+                    <div style="text-align: right;">
+                        <button type="button" class="likeButton"> <!-- 高評価数の表示 -->
+                            <span class="material-symbols-outlined">thumb_up</span><span>35</span>
+                        </button>
+                        <button type="button" class="commentButton"> <!-- コメント数の表示 -->
+                            <span class="material-symbols-outlined">comment</span><span>8</span>
                         </button>
                     </div>
                 </th>

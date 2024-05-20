@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <title>ログイン画面</title>
@@ -7,6 +8,7 @@
         body {
             font-family: Arial, sans-serif;
         }
+
         .container {
             width: 300px;
             margin: 0 auto;
@@ -15,12 +17,14 @@
             border-radius: 5px;
             background-color: #f9f9f9;
         }
+
         .container h2 {
             text-align: center;
         }
+
         .container input[type="password"],
         .container input[type="new_password"],
-        .container input[type="new_password_con"]{
+        .container input[type="new_password_con"] {
             width: 100%;
             padding: 10px;
             margin: 5px 0;
@@ -28,7 +32,8 @@
             border: 1px solid #ccc;
             border-radius: 3px;
         }
-        .container input[type="submit"] {
+
+        .container input[type="button"] {
             width: 100%;
             padding: 10px;
             margin-top: 10px;
@@ -39,11 +44,13 @@
             color: #fff;
             cursor: pointer;
         }
-        .container input[type="submit"]:hover {
+
+        .container input[type="button"]:hover {
             background-color: #0056b3;
         }
     </style>
 </head>
+
 <body>
     <div class="container">
         <h2>パスワードを変更</h2>
@@ -60,18 +67,19 @@
                 if (strpos($password, "and") === false) {
                     // パスワードが "and" を含まない場合はエラーメッセージを表示する
                     echo "<div style='color: red; margin-top: 5px;'>現在のパスワードが一致しません</div>";
-                }elseif($new_password !== $new_password_con){
+                } elseif ($new_password !== $new_password_con) {
                     // パスワードが "and" を含まない場合はエラーメッセージを表示する
                     echo "<div style='color: red; margin-top: 5px;'>新しいパスワードが一致しません</div>";
-                }else {
+                } else {
                     // パスワードが一致した場合はホーム画面にリダイレクトする
                     header("Location: login.php");
                     exit; // リダイレクト後にスクリプトの実行を終了する
                 }
             }
             ?>
-            <input type="submit" value="変更">
+            <input type="button" class="return_button" onclick="location.href='./finish_password.php'" value="変更">
         </form>
     </div>
 </body>
+
 </html>
