@@ -5,7 +5,7 @@
 
 <div style="text-align: right;"> <!-- ボタンを右揃えにする -->
     <button type="button" class="likeButton" data-id="<?= $row['id'] ?>">
-        <span class="material-symbols-outlined">thumb_up</span>
+        <span class="material-symbols-outlined">thumb_up</span>        
         <span class="likeCount">0</span> <!-- 初期値として0を表示するカウント -->
     </button>
 </div>

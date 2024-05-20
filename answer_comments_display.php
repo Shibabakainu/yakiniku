@@ -32,7 +32,7 @@ $result = $connect->query($sql);
 
 if ($result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) {
-        echo "<tr class='target' data-id='" . $row['id'] . "'>";
+        echo "<tr class='target' data-id='" . $row['id'] . "' bgcolor='#ffffff'>";
         echo    "<td>";
         echo    "<img src='profile/profileicon/6628913fb7d1d.jpg' class='profile_image'>";
         echo    "<p class='name'>" . htmlspecialchars($row['name']) . "<br></p>";
@@ -53,9 +53,9 @@ $connect->close();
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         // アイコンがクリックされたときの処理
-        document.querySelectorAll('.icon img.profile_image').forEach(icon => {
+        document.querySelectorAll('.profile_image').forEach(icon => {
             icon.addEventListener('click', function() {
-                const commentId = this.parentElement.getAttribute('data-id');
+                const commentId = this.closest('.target').getAttribute('data-id');
                 window.location.href = 'demo_otherprofile.php?id=' + commentId;
             });
         });
@@ -65,12 +65,12 @@ $connect->close();
             let likeCountSpan = button.querySelector('.likeCount');
             button.addEventListener('click', function() {
                 let currentCount = parseInt(likeCountSpan.textContent);
-                if (likeCountSpan.classList.contains('liked')) {
-                    likeCountSpan.classList.remove('liked');
+                if (button.classList.contains('liked')) {
+                    button.classList.remove('liked');
                     currentCount--;
                 } else {
+                    button.classList.add('liked');
                     currentCount++;
-                    likeCountSpan.classList.add('liked');
                 }
                 likeCountSpan.textContent = currentCount;
             });
