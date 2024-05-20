@@ -1,8 +1,20 @@
-
+<script>
+    // 順序を変更する関数
+    function changeOrder(order) {
+        // フォームを取得
+        var form = document.getElementById("orderForm");
+        // ラジオボタンの選択状態を更新
+        form.order.value = order;
+        // フォームを送信
+        form.submit();
+    }
+</script>
 <form id="orderForm">
     <input type="radio" name="order" value="asc" onchange="changeOrder('asc')"> 古い順
     <input type="radio" name="order" value="desc" onchange="changeOrder('desc')"> 新しい順
 </form>
+<div id="goodCountButtonContainer"></div>
+
 <?php
 $servername = "localhost";
 $username = "username";
@@ -28,7 +40,7 @@ if($result->num_rows > 0) {
         echo    "<img src='profile/profileicon/6628913fb7d1d.jpg' class='profile_image'>";            
         echo    "<p class='name'>" . htmlspecialchars($row['name']) . "<br></p>";
         echo    "<p class='comment'>" . htmlspecialchars($row['comment']) . "</p>";                            
-        echo    "<?php require __DIR__ . '/GoodCountButton1.php'; ?>";                 
+        require __DIR__ . '/GoodCountButtonDB.php';                
         echo    "<p class='time'>投稿日時: " . $row['timestamp'] . "</p>";
         echo "</td>";
     }
