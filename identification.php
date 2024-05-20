@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
 <?php
-require_once __DIR__ . '/nav.php';
+require_once __DIR__ . '/newNav.php';
 ?>
     <meta charset="UTF-8">
     <title>ログイン画面</title>
@@ -70,7 +70,6 @@ require_once __DIR__ . '/nav.php';
             ?>
             <input type="submit" value="ログイン">
         </form>
-        <a href="profile/profile.php">新規作成</a>
 
     </div>
 </body>

@@ -30,15 +30,18 @@ if($connect->connect_error) {
 //$order = $_GET['order']; // JavaScriptから渡される選択された順序
 $order = isset($_GET['order']) ? $_GET['order'] : 'asc';
 
-$sql = "SELECT id, name, comment, timestamp FROM answer_comments ORDER BY timestamp $order";
-$result = $connect->query($sql);
 //コメント表示
+$sql = "SELECT answer_comments.comment, users.email, users.name, users.id AS user_id, timestamp
+        FROM answer_comments
+        JOIN users ON answer_comments.user_id = users.id
+        ORDER BY timestamp $order";
+$result = $connect->query($sql);
 if($result->num_rows > 0) {
     while($row = $result->fetch_assoc()) {
         echo "<tr class='target' data-id='" .$row['id']. "'>";
         echo    "<td>";       
         echo    "<img src='profile/profileicon/6628913fb7d1d.jpg' class='profile_image'>";            
-        echo    "<p class='name'>" . htmlspecialchars($row['name']) . "<br></p>";
+        echo    "<p><strong><a href='profile.php?id=" . $row['user_id'] . "'>" . htmlspecialchars($row['name']) ."<br></p>";
         echo    "<p class='comment'>" . htmlspecialchars($row['comment']) . "</p>";                            
         require __DIR__ . '/GoodCountButtonDB.php';                
         echo    "<p class='time'>投稿日時: " . $row['timestamp'] . "</p>";
