@@ -22,7 +22,7 @@ require_once __DIR__ . '/newNav.php';
         }
 
         td {
-            font-size: 50px;
+            font-size: 200%;
             width: 1100px;
         }
 
