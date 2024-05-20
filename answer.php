@@ -65,7 +65,7 @@ require_once __DIR__ . '/newNav.php';
                     <img src="profile\profileicon\662b12c596ba3.jpg" class='profile_image'>
                     <p class="main">石より硬い岸本<br>私はこの方法で解決しました。........</p>
                     <?php
-                        require __DIR__ . '/GoodCountButton2.php';
+                        require __DIR__ . '/GoodCountButton1.php';
                     ?>
                     <p class="time">投稿日時: 2024-05-02 11:14:22</p>
                 </td>
@@ -81,7 +81,7 @@ require_once __DIR__ . '/newNav.php';
                 </td>
             </tr>
             <?php include 'answer_comments_display.php'; ?>
-            
+
         </table>
     </div>
 

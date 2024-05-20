@@ -7,8 +7,8 @@ body {
 }
 
 .wrap {
-    width: 80%;
-    margin:auto;
+    /*width: 80%;
+    margin:auto;*/
     background-color: #c4e4f5;
     padding: 20px 0 0 30px;
     height: 100%;

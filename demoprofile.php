@@ -27,6 +27,7 @@ require_once __DIR__ . '/newNav.php'; // ルートディレクトリからの相
             margin-top: 50px;
             margin-bottom: 50px;
             margin-left: 0px;
+            margin-right: 0px;
             padding: 0;
         }
 
@@ -44,45 +45,60 @@ require_once __DIR__ . '/newNav.php'; // ルートディレクトリからの相
             border-radius: 12px;
         }
 
+        .edit_button:hover {
+            background-color: green;
+            border: none;
+            color: white;
+
+            cursor: pointer;
+            border-radius: 12px;
+        }
         .wrap {
-            width: 80%;
-            margin: auto;
+            /*width: 80%;
+            margin: auto;*/
             background-color: #c4e4f5;
-            padding: 50px 0 0 30px;
+            padding: 50px 30px 30px 30px;
             height: 100%;
+        }
+
+        .profile {
+            text-align: center;
         }
     </style>
 </head>
 
 <body>
     <div class="wrap">
-    <?php
-    // フォームからの送信があるかどうかをチェック
-    if (isset($_POST['name']) && isset($_POST['singleword']) && isset($_POST['icon_path'])) {
-        // フォームからの送信がある場合は送信されたデータを表示
-        $name = $_POST['name'];
-        $course = "ITエキスパート学科";
-        $singleword = $_POST['singleword'];
-        $icon_path = $_POST['icon_path'];
-    } else {
-        // フォームからの送信がない場合は仮のデータを表示
-        $name = "ジョリーパスタ";
-        $course = "ITエキスパート学科";
-        $singleword = "コロナは風と共に去りぬ";
-        $icon_path = "profile/profileicon/6625c9866671f.jpg"; // アイコンの画像パス
-    }
+        <div class="profile">
+            <?php
+            // フォームからの送信があるかどうかをチェック
+            if (isset($_POST['name']) && isset($_POST['singleword']) && isset($_POST['icon_path'])) {
+                // フォームからの送信がある場合は送信されたデータを表示
+                $name = $_POST['name'];
+                $course = "ITエキスパート学科";
+                $singleword = $_POST['singleword'];
+                $icon_path = $_POST['icon_path'];
+            } else {
+                // フォームからの送信がない場合は仮のデータを表示
+                $name = "ジョリーパスタ";
+                $course = "ITエキスパート学科";
+                $singleword = "コロナは風と共に去りぬ";
+                $icon_path = "profile/profileicon/6625c9866671f.jpg"; // アイコンの画像パス
+            }
 
-    // ユーザーのデータを表示
-    echo "<p><strong>アイコン:</strong><br><img src='$icon_path' class='profile_image'></p>";
-    echo "<p><strong>名前:</strong> $name</p>";
-    echo "<p><strong>学科:</strong> $course</p>";
-    echo "<p><strong>一言:</strong> $singleword</p>";
-    ?>
+            // ユーザーのデータを表示
+            echo "<p><strong>アイコン:</strong><br><img src='$icon_path' class='profile_image'></p>";
+            echo "<p><strong>名前:</strong> $name</p>";
+            echo "<p><strong>学科:</strong> $course</p>";
+            echo "<p><strong>一言:</strong> $singleword</p>";
+            ?>
 
-    <!-- 編集ボタンをユーザーのデータの下に配置 -->
-    <a href='identification.php' class="edit_button">編集</a>
+            <!-- 編集ボタンをユーザーのデータの下に配置 -->
+            <a href='identification.php' class="edit_button">編集</a>
 
-    <br><br> <!-- ボタンとテーブルの間に適切な間隔を設定 -->
+            <br><br> <!-- ボタンとテーブルの間に適切な間隔を設定 -->
+
+        </div>
 
     <!-- 投稿作品一覧テーブル -->
     <p class="view_p">投稿作品一覧</p>
@@ -91,21 +107,30 @@ require_once __DIR__ . '/newNav.php'; // ルートディレクトリからの相
             <td width="400px">タイトル</td>
             <td width="800px">作品の説明</td>
         </tr>
-        <?php
-        for ($i = 0; $i < 4; $i++) {
-            if ($i % 2 == 0) {
-                echo "<tr bgcolor=" . "#ffffff" .">";
-                echo '<td><a href="./detail.php"><span style="color: black;">あいうえお</span></a></td>';   // タイトル
-                echo "<th>あかさたなはまやらわ</th>";   // 作品詳細
-                echo "</tr>";
-            } else {
-                echo "<tr bgcolor=" . "#f5f5f5" . ">";
-                echo '<td><a href="./detail.php"><span style="color: black;">abcde</span></a></td>';    // タイトル
-                echo "<th>abcdefghijklmn</th>"; // 作品詳細
-                echo "</tr>";
-            }
-        }
-        ?>
+        <tr bgcolor="ffffff">
+            <td><a href="Poster.php"><span style="color: black;">ChatGPTに聞いてみた！</span></a></td>
+            <th>
+                ChatGPTに今話題のスクラム開発について聞いてみた！
+            </th>
+        </tr>
+        <tr bgcolor="ffffff">
+            <td><a href="question_detail.php"><span style="color: black;">「ゼロから始める機械学習」: 機械学習入門ガイド</span></a></td>
+            <th>
+                この記事では、機械学習の基本から応用までを解説します。アルゴリズム、データセット、モデルの選択方法などについて詳しく説明します。
+            </th>
+        </tr>
+        <tr bgcolor="ffffff">
+            <td><a href="question_detail.php"><span style="color: black;">「最新のフロントエンド開発トレンド」: 2023年版</span></a></td>
+            <th>
+                フロントエンド開発の最新トレンドを紹介する記事です。Webコンポーネント、TypeScript、モバイルフレームワークなどに焦点を当てています。
+            </th>
+        </tr>
+        <tr bgcolor="ffffff">
+            <td><a href="question_detail.php"><span style="color: black;">初心者向けC言語入門ガイド</span></a></td>
+            <th>
+                本記事は、プログラミング初心者向けにC言語の基本を解説する入門ガイドです。
+            </th>
+            </tr>
     </table>
 
     <p class="view_p">作成した質問一覧</p>
@@ -120,7 +145,7 @@ require_once __DIR__ . '/newNav.php'; // ルートディレクトリからの相
                 辞書型がよくわかりません
             </th>
         </tr>
-        <tr bgcolor="f5f5f5">
+        <tr bgcolor="ffffff">
             <td><a href="question_detail.php"><span style="color: black;">「急募」就活の必勝法</span></a></td>
             <th>
                 共に働けるイメージを沸かすしかないのでしょうか？
@@ -132,7 +157,7 @@ require_once __DIR__ . '/newNav.php'; // ルートディレクトリからの相
                 おすすめの本を教えてください
             </th>
         </tr>
-        <tr bgcolor="f5f5f5">
+        <tr bgcolor="ffffff">
         <td><a href="question_detail.php"><span style="color: black;">AIに愛を教えたい</span></a></td>
         <th>
             どのような愛が適切だと思いますか？(恋愛、隣人愛等)

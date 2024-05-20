@@ -24,6 +24,9 @@ require_once __DIR__ . '/newNav.php';
             <label><input type="checkbox" value="PHP" name="tags"><span>#PHP</span></label>
             <label><input type="checkbox" value="JavaScript" name="tags"><span>#JavaScript</span></label>
             <label><input type="checkbox" value="HTML/CSS" name="tags"><span>#HTML/CSS</span></label>
+            <label><input type="checkbox" value="AI" name="tags"><span>#AI</span></label>
+            <label><input type="checkbox" value="Web" name="tags"><span>#Web</span></label>
+            <label><input type="checkbox" value="AWS" name="tags"><span>#AWS</span></label>
             <h4>画像</h4>
             <input type="file" name="image" accept=".jpg, .png"><br>
             <button type="submit" class="submit_button" formaction="http://localhost/yakiniku/finish.php">投稿</button>

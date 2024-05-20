@@ -1,11 +1,9 @@
+<link rel="stylesheet" href="styles/GoodCountButtonDB.css"> <!-- GoodCountButton.cssを読み込む -->
 <script>
     // 順序を変更する関数
     function changeOrder(order) {
-        // フォームを取得
         var form = document.getElementById("orderForm");
-        // ラジオボタンの選択状態を更新
         form.order.value = order;
-        // フォームを送信
         form.submit();
     }
 </script>
@@ -23,12 +21,12 @@ $dbname = "yakiniku";
 
 $connect = new mysqli($servername, $username, $password, $dbname);
 
-if($connect->connect_error) {
+if ($connect->connect_error) {
     die("Connection failed: " . $connect->connect_error);
 }
 
-//$order = $_GET['order']; // JavaScriptから渡される選択された順序
 $order = isset($_GET['order']) ? $_GET['order'] : 'asc';
+
 
 //コメント表示
 $sql = "SELECT answer_comments.comment, users.email, users.name, users.id AS user_id, timestamp
@@ -44,25 +42,43 @@ if($result->num_rows > 0) {
         echo    "<p><strong><a href='profile.php?id=" . $row['user_id'] . "'>" . htmlspecialchars($row['name']) ."<br></p>";
         echo    "<p class='comment'>" . htmlspecialchars($row['comment']) . "</p>";                            
         require __DIR__ . '/GoodCountButtonDB.php';                
+
         echo    "<p class='time'>投稿日時: " . $row['timestamp'] . "</p>";
         echo "</td>";
+        echo "</tr>";
     }
 } else {
     echo " ";
 }
-        echo "</tr>";
 
 $connect->close();
-
 ?>
 
 <link rel="stylesheet" href="styles/icon.css">
 <script>
-    // アイコンがクリックされたときの処理
-    document.querySelectorAll('.icon img.profile_image').forEach(icon => {
-        icon.addEventListener('click', function() {
-            const commentId = this.parentElement.getAttribute('data-id');
-            window.location.href = 'demo_otherprofile.php?id=' + commentId;
+    document.addEventListener('DOMContentLoaded', function() {
+        // アイコンがクリックされたときの処理
+        document.querySelectorAll('.profile_image').forEach(icon => {
+            icon.addEventListener('click', function() {
+                const commentId = this.closest('.target').getAttribute('data-id');
+                window.location.href = 'demo_otherprofile.php?id=' + commentId;
+            });
+        });
+
+        // いいねボタンの処理
+        document.querySelectorAll('.likeButton').forEach(button => {
+            let likeCountSpan = button.querySelector('.likeCount');
+            button.addEventListener('click', function() {
+                let currentCount = parseInt(likeCountSpan.textContent);
+                if (button.classList.contains('liked')) {
+                    button.classList.remove('liked');
+                    currentCount--;
+                } else {
+                    button.classList.add('liked');
+                    currentCount++;
+                }
+                likeCountSpan.textContent = currentCount;
+            });
         });
     });
 </script>

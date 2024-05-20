@@ -25,6 +25,9 @@ require_once __DIR__ . '/newNav.php';
             <label><input type="checkbox" value="PHP" name="tags"><span>#PHP</span></label>
             <label><input type="checkbox" value="JavaScript" name="tags"><span>#JavaScript</span></label>
             <label><input type="checkbox" value="HTML/CSS" name="tags"><span>#HTML/CSS</span></label>
+            <label><input type="checkbox" value="AI" name="tags"><span>#AI</span></label>
+            <label><input type="checkbox" value="Web" name="tags"><span>#Web</span></label>
+            <label><input type="checkbox" value="AWS" name="tags"><span>#AWS</span></label>
             <h4>タイトル画像のアップロード</h4>
             <input type="file" accept=".jpg, .png">
             <h4>ファイルのアップロード</h4>

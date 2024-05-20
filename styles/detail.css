@@ -4,9 +4,9 @@ body {
     margin: 0;
 }
 .wrap {
-    width: 80%;
+    /*width: 80%;
     margin-right: auto;
-    margin-left: auto;
+    margin-left: auto;*/
     padding: 1px 30px;
     background-color: #c4e4f5;
     height: 100%;

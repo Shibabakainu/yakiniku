@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="styles/newNav.css">
 
 </head>
-<body class="nav_body">
+<body>
     <nav>
         <ul>
             <li><a href="home.php"><span class="material-symbols-outlined">home</span>ホーム</a></li>
@@ -16,7 +16,7 @@
             <li><a href="question_list.php"><span class="material-symbols-outlined">quick_reference_all</span>質問の閲覧</a></li>
             <li><a href="upload.php"><span class="material-symbols-outlined">drive_folder_upload</span>記事を作成</a></li>
             <li><a href="question.php"><span class="material-symbols-outlined">quiz</span>質問を投稿</a></li>
-        </ul>           
+        </ul>
         <button id="modalButton" class="logoutButton"><span class="material-symbols-outlined">logout</span></button>
     </nav>
 
