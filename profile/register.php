@@ -13,7 +13,7 @@
         .wrap {
             width: 80%;
             margin: auto;
-            padding: 1px 0 50px 0px;
+            padding: 1px 0 50px 30px;
             background-color: #c4e4f5;
             height: 100%;
         }
