@@ -17,17 +17,24 @@ require_once __DIR__ . '/newNav.php';
         margin-left: 0px;
         padding: 0;
     }
+    .wrap {
+        width: 80%;
+        margin: auto;
+        background-color: #c4e4f5;
+        padding: 50px 0 0 30px;
+        height: 100%;
+    }
 </style>
 
 <body>
-
+    <div class="wrap">
 
     <h2 class="poster_h2">pythonの課題について</h2>
     <h3>回答一覧</h3>
 
     <div class="targets">
         <table border="1" style="border-collapse: collapse">
-            <tr class="target" data-category="C">
+            <tr bgcolor="#f5f5f5" class="target" data-category="C">
                 <td>
                     <img src="images/ebi.jpeg" class='profile_image'>
                     <p class="main">限りなくエビ<br>こんなやり方はどうでしょう。........</p>
@@ -69,7 +76,7 @@ require_once __DIR__ . '/newNav.php';
         });
     </script>
 
-
+    </div>
 
 </body>
 <?php

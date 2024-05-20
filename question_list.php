@@ -4,42 +4,42 @@ require_once __DIR__ . '/newNav.php';
 
 <!DOCTYPE html>
 <html lang="ja">
-    <head>
-        <meta charset="utf-8">
-        <title>質問一覧</title>
-        <link rel="stylesheet" href="styles/view.css">
-        <style type="text/css">
-            table{
-                margin: auto;
-                margin-top: 50px;
-                margin-bottom: 50px;
-            }
-            tr{
-                height: 100px;
-                text-align: center;
-            }
-            td{
-                font-size: 50px;
-                width: 1100px;
-            }
-            th{
-                font-size: 25px;
-                width: 100px;
-            }
-            .view_p{
-                font-size: 300%;
-                text-align: center;
-            }
 
-            .contentTitle {
-                text-align: left;
-            }
-        </style>
-    </head>
+<head>
+    <meta charset="utf-8">
+    <title>質問一覧</title>
+    <link rel="stylesheet" href="styles/view.css">
+    <style type="text/css">
+        table {
+            margin: auto;
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
 
-    <body>
-        <br>
-        <p class="view_p">質問一覧</p>
+        tr {
+            height: 100px;
+            text-align: center;
+        }
+
+        td {
+            font-size: 200%;
+            width: 1100px;
+        }
+
+        th {
+            font-size: 25px;
+            width: 100px;
+        }
+
+        .contentTitle {
+            text-align: left;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <h1>質問一覧</h1>
         <!-- フィルタ（ラジオボタンとラベル） -->
         <input type="radio" name="categories" id="All" value="All" checked>
         <input type="radio" name="categories" id="C" value="C">
@@ -65,7 +65,7 @@ require_once __DIR__ . '/newNav.php';
                     <td>質問タイトル</td>
                     <th>未/済</th>
                 </tr>
-                <tr class="target" data-category="C">
+                <tr bgcolor="#ffffff" class="target" data-category="C">
                     <td><a href="./answer.php" class="contentTitle"><span style="color: black;">C言語のループ処理について</span></a></td>
                     <th>未回答</th>
                 </tr>
@@ -73,11 +73,29 @@ require_once __DIR__ . '/newNav.php';
                     <td><a href="./answer.php" class="contentTitle"><span style="color: black;">機械学習について</span></a></td>
                     <th>回答済</th>
                 </tr>
+                <tr bgcolor="#f5f5f5" class="target" data-category="Python">
+                    <td><a href="./answer.php" class="contentTitle"><span style="color: black;">Pythonでリスト内包表記を使うと何が便利なの？</span></a></td>
+                    <th>回答済</th>
+                </tr>
+                <tr bgcolor="#f5f5f5" class="target" data-category="Java">
+                    <td><a href="./answer.php" class="contentTitle"><span style="color: black;">Javaのラムダ式とは何ですか</span></a></td>
+                    <th>未回答</th>
+                </tr>
+                <tr bgcolor="#f5f5f5" class="target" data-category="Web">
+                    <td><a href="./answer.php" class="contentTitle"><span style="color: black;">CookieとSessionの違いは何ですか？それぞれどのように使用されますか？</span></a></td>
+                    <th>未回答</th>
+                </tr>
+                <tr bgcolor="#f5f5f5" class="target" data-category="AWS">
+                    <td><a href="./answer.php" class="contentTitle"><span style="color: black;">AWSとは何ですか 主なサービスや利点は何ですか</span></a></td>
+                    <th>回答済</th>
+                </tr>
             </table>
         </div>
-    </body>
+    </div>
+</body>
+
 </html>
 
 <?php
-    require_once __DIR__ . '/footer.php';
+require_once __DIR__ . '/footer.php';
 ?>
