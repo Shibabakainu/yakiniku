@@ -80,6 +80,7 @@ require_once __DIR__ . '/newNav.php';
                 </td>
             </tr>
             <?php include 'answer_comments_display.php'; ?>
+            
         </table>
     </div>
 
