@@ -1,4 +1,12 @@
-.iineButton {
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 1,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 20;
+}
+
+.likeButton {
     color: #888;
     font-size: 1.5em;
     background-color: transparent;
@@ -13,11 +21,11 @@
     margin-right: 30px;
 }
 
-.iineButton:hover {
+.likeButton:hover {
     color: deepskyblue;
 }
 
-.iineButton.liked {
+.likeButton.liked {
     color: #ffffff;
     background-color: deepskyblue;
     border-color: deepskyblue;

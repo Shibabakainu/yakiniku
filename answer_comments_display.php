@@ -33,11 +33,11 @@ $result = $connect->query($sql);
 if ($result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) {
         echo "<tr class='target' data-id='" . $row['id'] . "'>";
-        echo    "<td>";       
-        echo    "<img src='profile/profileicon/6628913fb7d1d.jpg' class='profile_image'>";            
+        echo    "<td>";
+        echo    "<img src='profile/profileicon/6628913fb7d1d.jpg' class='profile_image'>";
         echo    "<p class='name'>" . htmlspecialchars($row['name']) . "<br></p>";
-        echo    "<p class='comment'>" . htmlspecialchars($row['comment']) . "</p>";                            
-        require __DIR__ . '/GoodCountButtonDB.php';                
+        echo    "<p class='comment'>" . htmlspecialchars($row['comment']) . "</p>";
+        require __DIR__ . '/GoodCountButtonDB.php';
         echo    "<p class='time'>投稿日時: " . $row['timestamp'] . "</p>";
         echo "</td>";
         echo "</tr>";
@@ -61,18 +61,18 @@ $connect->close();
         });
 
         // いいねボタンの処理
-        document.querySelectorAll('.iinebutton').forEach(button => {
-            let iineCountSpan = button.querySelector('.iineCount');
+        document.querySelectorAll('.likeButton').forEach(button => {
+            let likeCountSpan = button.querySelector('.likeCount');
             button.addEventListener('click', function() {
-                let currentCount = parseInt(iineCountSpan.textContent);
-                if (iineCountSpan.classList.contains('liked')) {
-                    iineCountSpan.classList.remove('liked');
+                let currentCount = parseInt(likeCountSpan.textContent);
+                if (likeCountSpan.classList.contains('liked')) {
+                    likeCountSpan.classList.remove('liked');
                     currentCount--;
                 } else {
                     currentCount++;
-                    iineCountSpan.classList.add('liked');
+                    likeCountSpan.classList.add('liked');
                 }
-                iineCountSpan.textContent = currentCount;
+                likeCountSpan.textContent = currentCount;
             });
         });
     });
