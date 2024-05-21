@@ -54,16 +54,27 @@
             $stmt->bind_param("ssssss", $email, $password, $profile_image, $name, $course, $singleword);
 
             if ($stmt->execute()) {
-                echo "Registration successful!";
-                // 受け取ったデータを表示
-                echo "<p><strong>名前:</strong> $name</p>";
-                echo "<p><strong>学科:</strong> $course</p>";
-                echo "<p><strong>一言:</strong> $singleword</p>";
-                echo "<p><strong>メールアドレス:</strong> $email</p>";
-                // 画像プレビューなども表示する場合はここで追加
-                echo "<p><strong>プロフィール画像:</strong><br><img src='$profile_image' class='profile_image'></p>";
-                //header("Location: login.php"); // Redirect to the login page after successful registration
-                echo "<button onclick=\"location.href='result.php'\">新規作成</button>";
+            // Display user information
+            echo "<!DOCTYPE html>";
+            echo "<html lang='ja'>";
+            echo "<head>";
+            echo "<meta charset='UTF-8'>";
+            echo "<title>Registration Successful</title>";
+            echo "<style>
+                    .profile_image { max-width: 150px; height: auto; }
+                    body { font-family: Arial, sans-serif; background-color: #c4e4f5; text-align: center;}
+                  </style>";
+            echo "</head>";
+            echo "<body>";
+            echo "<h1>Registration successful!</h1>";
+            echo "<p><strong>名前:</strong> " . htmlspecialchars($name) . "</p>";
+            echo "<p><strong>学科:</strong> " . htmlspecialchars($course) . "</p>";
+            echo "<p><strong>一言:</strong> " . htmlspecialchars($singleword) . "</p>";
+            echo "<p><strong>メールアドレス:</strong> " . htmlspecialchars($email) . "</p>";
+            echo "<p><strong>プロフィール画像:</strong><br><img src='" . htmlspecialchars($target_file) . "' class='profile_image'></p>";
+            echo "<button onclick=\"location.href='result.php'\">新規作成</button>";
+            echo "</body>";
+            echo "</html>";
                 exit;
             } else {
                 echo "Error: " . $stmt->error;
