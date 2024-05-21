@@ -67,7 +67,9 @@
             <div id="passwordMismatch">パスワードが一致しません</div><br>
 
             <input type="submit" value="保存">
+            
         </form>
+        
     </div>
     <script>
         function previewImage() {

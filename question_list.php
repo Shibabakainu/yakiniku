@@ -69,23 +69,23 @@ require_once __DIR__ . '/newNav.php';
                     <td><a href="./answer.php" class="contentTitle"><span style="color: black;">C言語のループ処理について</span></a></td>
                     <th>未回答</th>
                 </tr>
-                <tr bgcolor="#f5f5f5" class="target" data-category="AI">
+                <tr bgcolor="#ffffff" class="target" data-category="AI">
                     <td><a href="./answer.php" class="contentTitle"><span style="color: black;">機械学習について</span></a></td>
                     <th>回答済</th>
                 </tr>
-                <tr bgcolor="#f5f5f5" class="target" data-category="Python">
+                <tr bgcolor="#ffffff" class="target" data-category="Python">
                     <td><a href="./answer.php" class="contentTitle"><span style="color: black;">Pythonでリスト内包表記を使うと何が便利なの？</span></a></td>
                     <th>回答済</th>
                 </tr>
-                <tr bgcolor="#f5f5f5" class="target" data-category="Java">
+                <tr bgcolor="#ffffff" class="target" data-category="Java">
                     <td><a href="./answer.php" class="contentTitle"><span style="color: black;">Javaのラムダ式とは何ですか</span></a></td>
                     <th>未回答</th>
                 </tr>
-                <tr bgcolor="#f5f5f5" class="target" data-category="Web">
+                <tr bgcolor="#ffffff" class="target" data-category="Web">
                     <td><a href="./answer.php" class="contentTitle"><span style="color: black;">CookieとSessionの違いは何ですか？それぞれどのように使用されますか？</span></a></td>
                     <th>未回答</th>
                 </tr>
-                <tr bgcolor="#f5f5f5" class="target" data-category="AWS">
+                <tr bgcolor="#ffffff" class="target" data-category="AWS">
                     <td><a href="./answer.php" class="contentTitle"><span style="color: black;">AWSとは何ですか 主なサービスや利点は何ですか</span></a></td>
                     <th>回答済</th>
                 </tr>

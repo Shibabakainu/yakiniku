@@ -2,6 +2,7 @@
 <html lang="ja">
 <head>
 <?php
+
 require_once __DIR__ . '/newnav.php';
 ?>
     <meta charset="UTF-8">

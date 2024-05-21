@@ -47,25 +47,54 @@
     <div class="container">
         <h2>Login</h2>
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-            <input type="text" name="username" placeholder="メールアドレス" required>
+            <input type="text" name="email" placeholder="メールアドレス" required>
             <input type="password" name="password" placeholder="パスワード" required>
-            <?php
-            // フォームが送信された場合の処理
-            if ($_SERVER["REQUEST_METHOD"] == "POST") {
-                $username = $_POST["username"];
-                $password = $_POST["password"];
-                if (strpos($password, "and") === false) {
-                    // パスワードが "and" を含まない場合はエラーメッセージを表示する
-                    echo "<div style='color: red; margin-top: 5px;'>パスワードが一致しません</div>";
-                }else {
-                    // パスワードが一致した場合はホーム画面にリダイレクトする
-                    header("Location: home.php");
-                    exit; // リダイレクト後にスクリプトの実行を終了する
-                }
-            }
-            ?>
             <input type="submit" value="ログイン">
         </form>
+        <?php
+        session_start();
+        include '../db_connect.php'; // Include the database connection script
+
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+            $email = $_POST['email'];
+            $password = $_POST['password'];
+
+            // Prepare and execute the SQL statement
+            $stmt = $conn->prepare("SELECT id, password FROM users WHERE email = ?");
+            if ($stmt === false) {
+                die('Prepare failed: ' . $conn->error);
+            }
+
+            $stmt->bind_param("s", $email);
+            if ($stmt->execute() === false) {
+                die('Execute failed: ' . $stmt->error);
+            }
+
+            $stmt->store_result();
+            if ($stmt->num_rows > 0) {
+                $stmt->bind_result($user_id, $hashed_password);
+                $stmt->fetch();
+
+                // Verify the password
+                if (password_verify($password, $hashed_password)) {
+                    // Password is correct, start a session
+                    $_SESSION['user_id'] = $user_id;
+                    header('Location: profile.php'); // Redirect to the profile page
+                    exit;
+                } else {
+                    echo "Invalid email or password.";
+                }
+            } else {
+                echo "Invalid email or password.";
+            }
+
+            $stmt->close();
+        }
+
+        $conn->close();
+        ?>
+
+            
         <a href="register.php">新規作成</a>
 
     </div>

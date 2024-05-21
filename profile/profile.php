@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja">
 <?php
-require_once __DIR__ . '/newNav.php'; // ルートディレクトリからの相対パスでnav.phpを読み込む
+require_once __DIR__ . '/../newNav.php'; // ルートディレクトリからの相対パスでnav.phpを読み込む
 ?>
 
 <head>
@@ -57,26 +57,25 @@ require_once __DIR__ . '/newNav.php'; // ルートディレクトリからの相
 <body>
     <div class="wrap">
     <?php
-    // フォームからの送信があるかどうかをチェック
-    if (isset($_POST['name']) && isset($_POST['singleword']) && isset($_POST['icon_path'])) {
-        // フォームからの送信がある場合は送信されたデータを表示
-        $name = $_POST['name'];
-        $course = "ITエキスパート学科";
-        $singleword = $_POST['singleword'];
-        $icon_path = $_POST['icon_path'];
+    if (isset($_GET['id'])) {
+        $user_id = $_GET['id'];
+        $sql = "SELECT * FROM users WHERE id = '$user_id'";
+        $result = $conn->query($sql);
+        if ($result->num_rows > 0) {
+            $user = $result->fetch_assoc();
+            // ユーザーのデータを表示
+            echo "<h1>" . htmlspecialchars($user['name']) . "</h1>";
+            echo "<img src='" . htmlspecialchars($user['profile_image']) . "' alt='Profile Picture'>";
+            echo "<p>メール: " . htmlspecialchars($user['email']) . "</p>";
+            echo "<p>学科: " . htmlspecialchars($user['course']) . "</p>";
+            echo "<p>一言: " . htmlspecialchars($user['singleword']) . "</p>";
+            echo "<p>参加時点: " . htmlspecialchars($user['created_at']) . "</p>";
+        } else {
+            echo "User not found.";
+        }
     } else {
-        // フォームからの送信がない場合は仮のデータを表示
-        $name = "ジョリーパスタ";
-        $course = "ITエキスパート学科";
-        $singleword = "コロナは風と共に去りぬ";
-        $icon_path = "profile/profileicon/6625c9866671f.jpg"; // アイコンの画像パス
-    }
-
-    // ユーザーのデータを表示
-    echo "<p><strong>アイコン:</strong><br><img src='$icon_path' class='profile_image'></p>";
-    echo "<p><strong>名前:</strong> $name</p>";
-    echo "<p><strong>学科:</strong> $course</p>";
-    echo "<p><strong>一言:</strong> $singleword</p>";
+        echo "No user ID specified.";
+    }    
     ?>
 
     <!-- 編集ボタンをユーザーのデータの下に配置 -->
@@ -142,7 +141,7 @@ require_once __DIR__ . '/newNav.php'; // ルートディレクトリからの相
     </div>
 </body>
 <?php
-require_once __DIR__ . '/footer.php';
+require_once __DIR__ . '/../footer.php';
 ?>
 
 </html>
