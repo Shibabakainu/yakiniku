@@ -1,16 +1,21 @@
 <?php
-include 'db_connect.php'; 
+include 'db_connect.php';
 
-$name = $_POST['name'];
-$comment = $_POST['comment'];
+session_start();
 
-$sql = "INSERT INTO answer_comments (name, comment) VALUES ('$name', '$comment')";
-if($conn->query($sql) === TRUE) {
-    header("Location: answer.php");
+if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_SESSION['user_id'])) {
+    $user_id = $_SESSION['user_id'];
+    $comment = $_POST['comment'];
+    
+    $sql = "INSERT INTO answer_comments (user_id, comment) VALUES ('$user_id', '$comment')";
+    if ($conn->query($sql) === TRUE) {
+        header("Location: answer.php");
+    } else {
+        echo "Error: " . $sql . "<br>" . $conn->error;
+    }
 } else {
-    echo "Error: " . $sql . "<br>" . $conn->error;
+    echo "You must be logged in to comment.";
 }
 
 $conn->close();
-
 ?>

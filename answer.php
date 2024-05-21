@@ -1,7 +1,9 @@
 <?php
 require_once __DIR__ . '/newNav.php';
 ?>
-
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="ja">
 
