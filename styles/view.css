@@ -162,8 +162,15 @@ input[type="radio"] {
 }
 
 .contentTitle {
+    color: black;
     text-align: left;
     padding: 0px;
+    text-decoration:none;
+    transition: color .3s;
+}
+
+.contentTitle:hover {
+    color: deepskyblue;
 }
 
 .contentBody {
@@ -172,5 +179,6 @@ input[type="radio"] {
 }
 
 .timeStamp {
-    text-align: center;
+    text-align: left;
 }
+
