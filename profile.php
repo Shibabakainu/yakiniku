@@ -1,3 +1,6 @@
+<?php
+session_start(); 
+?>
 <!DOCTYPE html>
 <html lang="ja">
 <?php
@@ -58,10 +61,9 @@ require_once __DIR__ . '/newNav.php'; // ルートディレクトリからの相
     <div class="wrap">
     <?php
     include 'db_connect.php'; // Include the database connection script
-    require_once __DIR__ . '/newNav.php'; // Include the navigation bar
 
-    if (isset($_GET['id'])) {
-        $user_id = $_GET['id'];
+    if (isset($_SESSION['user_id'])) {
+        $user_id = $_SESSION['user_id'];
         $sql = "SELECT * FROM users WHERE id = ?";
         $stmt = $conn->prepare($sql);
         $stmt->bind_param("i", $user_id);

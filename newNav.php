@@ -28,7 +28,7 @@
                 <span id="warning" class="material-symbols-outlined">warning</span>ログアウトしてもよろしいですか？
             </h2>
             <div class="modalButton">
-                <button id="yes-button" onclick="location.href='../yakiniku/profile/login.php'">はい</button>
+                <button id="yes-button" onclick="location.href='logout.php'">はい</button>
                 <button id="cancel-button">キャンセル</button>
             </div>
         </div>
