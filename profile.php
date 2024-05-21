@@ -57,15 +57,22 @@ require_once __DIR__ . '/newNav.php'; // ルートディレクトリからの相
 <body>
     <div class="wrap">
     <?php
+    include 'db_connect.php'; // Include the database connection script
+    require_once __DIR__ . '/newNav.php'; // Include the navigation bar
+
     if (isset($_GET['id'])) {
         $user_id = $_GET['id'];
-        $sql = "SELECT * FROM users WHERE id = '$user_id'";
-        $result = $conn->query($sql);
+        $sql = "SELECT * FROM users WHERE id = ?";
+        $stmt = $conn->prepare($sql);
+        $stmt->bind_param("i", $user_id);
+        $stmt->execute();
+        $result = $stmt->get_result();
+
         if ($result->num_rows > 0) {
             $user = $result->fetch_assoc();
-            // ユーザーのデータを表示
+            // Display user data
             echo "<h1>" . htmlspecialchars($user['name']) . "</h1>";
-            echo "<img src='" . htmlspecialchars($user['profile_image']) . "' alt='Profile Picture'>";
+            echo "<img src='profile/profileicon/" . htmlspecialchars($user['profile_image']) . "' alt='Profile Picture' class='profile_image'>";
             echo "<p>メール: " . htmlspecialchars($user['email']) . "</p>";
             echo "<p>学科: " . htmlspecialchars($user['course']) . "</p>";
             echo "<p>一言: " . htmlspecialchars($user['singleword']) . "</p>";
@@ -73,9 +80,12 @@ require_once __DIR__ . '/newNav.php'; // ルートディレクトリからの相
         } else {
             echo "User not found.";
         }
+        $stmt->close();
     } else {
         echo "No user ID specified.";
-    }    
+    }
+
+    $conn->close();
     ?>
 
     <!-- 編集ボタンをユーザーのデータの下に配置 -->

@@ -72,10 +72,14 @@
             echo "<p><strong>一言:</strong> " . htmlspecialchars($singleword) . "</p>";
             echo "<p><strong>メールアドレス:</strong> " . htmlspecialchars($email) . "</p>";
             echo "<p><strong>プロフィール画像:</strong><br><img src='" . htmlspecialchars($target_file) . "' class='profile_image'></p>";
-            echo "<button onclick=\"location.href='result.php'\">新規作成</button>";
+            echo "<button onclick=\"location.href='../profile.php'\">新規作成</button>";
             echo "</body>";
             echo "</html>";
-                exit;
+            // Get the last inserted user ID
+            $user_id = $stmt->insert_id;
+            // Redirect to the profile page with user ID
+            header("Location: ../profile.php?id=$user_id");
+            exit;
             } else {
                 echo "Error: " . $stmt->error;
             }
