@@ -1,3 +1,6 @@
+<?php
+session_start(); 
+?>
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -52,7 +55,6 @@
             <input type="submit" value="ログイン">
         </form>
         <?php
-        session_start();
         include '../db_connect.php'; // Include the database connection script
 
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
