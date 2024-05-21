@@ -1,5 +1,5 @@
 <?php
-session_start(); 
+session_start();
 ?>
 <!DOCTYPE html>
 <html lang="ja">
@@ -54,44 +54,50 @@ require_once __DIR__ . '/newNav.php'; // ルートディレクトリからの相
             padding: 50px 0 0 30px;
             height: 100%;
         }
+
+        .profile {
+            text-align: center;
+        }
     </style>
 </head>
 
 <body>
     <div class="wrap">
-    <?php
-    include 'db_connect.php'; // Include the database connection script
+            <div class="profile">
+            <?php
+            include 'db_connect.php'; // Include the database connection script
 
-    if (isset($_SESSION['user_id'])) {
-        $user_id = $_SESSION['user_id'];
-        $sql = "SELECT * FROM users WHERE id = ?";
-        $stmt = $conn->prepare($sql);
-        $stmt->bind_param("i", $user_id);
-        $stmt->execute();
-        $result = $stmt->get_result();
+            if (isset($_SESSION['user_id'])) {
+                $user_id = $_SESSION['user_id'];
+                $sql = "SELECT * FROM users WHERE id = ?";
+                $stmt = $conn->prepare($sql);
+                $stmt->bind_param("i", $user_id);
+                $stmt->execute();
+                $result = $stmt->get_result();
 
-        if ($result->num_rows > 0) {
-            $user = $result->fetch_assoc();
-            // Display user data
-            echo "<h1>" . htmlspecialchars($user['name']) . "</h1>";
-            echo "<img src='profile/profileicon/" . htmlspecialchars($user['profile_image']) . "' alt='Profile Picture' class='profile_image'>";
-            echo "<p>メール: " . htmlspecialchars($user['email']) . "</p>";
-            echo "<p>学科: " . htmlspecialchars($user['course']) . "</p>";
-            echo "<p>一言: " . htmlspecialchars($user['singleword']) . "</p>";
-            echo "<p>参加時点: " . htmlspecialchars($user['created_at']) . "</p>";
-        } else {
-            echo "User not found.";
-        }
-        $stmt->close();
-    } else {
-        echo "No user ID specified.";
-    }
+                if ($result->num_rows > 0) {
+                    $user = $result->fetch_assoc();
+                    // Display user data
+                    echo "<h1><font size=7>" . htmlspecialchars($user['name']) . "</font></h1>";
+                    echo "<img src='profile/profileicon/" . htmlspecialchars($user['profile_image']) . "' alt='Profile Picture' class='profile_image'>";
+                    echo "<p><font size=5><b>メール</b>: " . htmlspecialchars($user['email']) . "</font></p>";
+                    echo "<p><font size=5><b>学科</b>: " . htmlspecialchars($user['course']) . "</font></p>";
+                    echo "<p><font size=5><b>一言</b>: " . htmlspecialchars($user['singleword']) . "</font></p>";
+                    echo "<p><font size=5><b>参加時点</b>: <font color=grey>" . htmlspecialchars($user['created_at']) . "</font></font></p>";
+                } else {
+                    echo "User not found.";
+                }
+                $stmt->close();
+            } else {
+                echo "No user ID specified.";
+            }
 
-    $conn->close();
-    ?>
+            $conn->close();
+            ?>
 
-    <!-- 編集ボタンをユーザーのデータの下に配置 -->
-    <a href='identification.php' class="edit_button">編集</a>
+            <!-- 編集ボタンをユーザーのデータの下に配置 -->
+            <a href='identification.php' class="edit_button">編集</a>
+        </div>
 
     <br><br> <!-- ボタンとテーブルの間に適切な間隔を設定 -->
 
