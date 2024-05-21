@@ -10,6 +10,7 @@
             margin: 0;
             padding: 0;
         }
+
         .wrap {
             width: 80%;
             margin: auto;
@@ -17,19 +18,49 @@
             background-color: #c4e4f5;
             height: 100%;
         }
+
         #profile_image_preview {
-            max-width: 200px; /* 最大幅を設定 */
-            max-height: 200px; /* 最大高さを設定 */
-            width: 200px; /* 幅を自動調整:auto */
-            height: 200px; /* 高さを自動調整:auto */
-            object-fit: cover; /* 画像を保持し、アスペクト比を維持しつつ要素全体にスケーリング */
-            border-radius: 50%; /* 円形にする */
-            display: none; /* 初期状態では非表示 */
+            max-width: 200px;
+            max-height: 200px;
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 50%;
+            display: none;
         }
+
         #passwordMismatch {
             color: red;
             margin-top: 5px;
             display: none;
+        }
+
+        #customAlert {
+            display: none;
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            background-color: white;
+            border: 1px solid #000;
+            z-index: 1000;
+            text-align: center;
+        }
+
+        #customAlert button {
+            margin: 10px;
+        }
+
+        #overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 500;
         }
     </style>
 </head>
@@ -41,7 +72,7 @@
             <label for="profile_image">プロフィール画像:</label><br>
             <input type="file" accept=".jpg,.jpeg,.png,.gif" id="profile_image" name="profile_image" onchange="previewImage()"><br><br>
             <img id="profile_image_preview" src="#" alt="プロフィール画像プレビュー"><br><br>
-            
+
             <label for="name">名前:</label><br>
             <input type="text" id="name" name="name"><br><br>
 
@@ -58,27 +89,33 @@
 
             <label for="email">メールアドレス:</label><br>
             <input type="email" id="email" name="email"><br><br>
-            
+
             <label for="password">パスワード:</label><br>
             <input type="password" id="password" name="password"><br><br>
-            
+
             <label for="confirm_password">パスワード再入力:</label><br>
             <input type="password" id="confirm_password" name="confirm_password" oninput="checkPasswordMatch()"><br>
             <div id="passwordMismatch">パスワードが一致しません</div><br>
 
-            <input type="submit" value="保存">
-            
+            <input type="button" value="保存" onclick="showCustomAlert()">
         </form>
-        
     </div>
+
+    <div id="overlay"></div>
+    <div id="customAlert">
+        <p>この内容で保存しますか？</p>
+        <button id="confirmButton">はい</button>
+        <button id="cancelButton">いいえ</button>
+    </div>
+
     <script>
         function previewImage() {
             var fileInput = document.getElementById('profile_image');
             var reader = new FileReader();
-            reader.onload = function() {
+            reader.onload = function () {
                 var output = document.getElementById('profile_image_preview');
                 output.src = reader.result;
-                output.style.display = 'block'; // 画像が選択されたら表示する
+                output.style.display = 'block';
             }
             reader.readAsDataURL(fileInput.files[0]);
         }
@@ -95,15 +132,30 @@
             }
         }
 
-        document.getElementById("profileForm").addEventListener("submit", function(event) {
+        function showCustomAlert() {
             var password = document.getElementById("password").value;
             var confirm_password = document.getElementById("confirm_password").value;
 
             if (password !== confirm_password) {
-                event.preventDefault(); // フォームの送信をキャンセル
                 document.getElementById("passwordMismatch").style.display = 'block';
+                return;
             }
-        });
+
+            document.getElementById('overlay').style.display = 'block';
+            document.getElementById('customAlert').style.display = 'block';
+        }
+
+        function closeCustomAlert() {
+            document.getElementById('overlay').style.display = 'none';
+            document.getElementById('customAlert').style.display = 'none';
+        }
+
+        function confirmSubmission() {
+            document.getElementById('profileForm').submit();
+        }
+
+        document.getElementById("confirmButton").addEventListener("click", confirmSubmission);
+        document.getElementById("cancelButton").addEventListener("click", closeCustomAlert);
     </script>
 </body>
 
