@@ -1,14 +1,5 @@
 <?php
-$servername = "localhost";
-$username = "username";
-$password = "password";
-$dbname = "yakiniku";
-
-$connect = new mysqli($servername, $username, $password, $dbname);
-
-if($connect->connect_error) {
-    die("Connection failed: " . $connect->connect_error);
-}
+include 'db_connect.php'; 
 
 $name = $_POST['name'];
 $comment = $_POST['comment'];
@@ -17,9 +8,9 @@ $sql = "INSERT INTO comments (name, comment) VALUES ('$name', '$comment')";
 if($connect->query($sql) === TRUE) {
     header("Location: detail.php");
 } else {
-    echo "Error: " . $sql . "<br>" . $connect->error;
+    echo "Error: " . $sql . "<br>" . $conn->error;
 }
 
-$connect->close();
+$conn->close();
 
 ?>

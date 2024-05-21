@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja">
 <?php
-require_once __DIR__ . '/../newNav.php'; // ルートディレクトリからの相対パスでnav.phpを読み込む
+require_once __DIR__ . '/newNav.php'; // ルートディレクトリからの相対パスでnav.phpを読み込む
 ?>
 
 <head>
@@ -141,7 +141,7 @@ require_once __DIR__ . '/../newNav.php'; // ルートディレクトリからの
     </div>
 </body>
 <?php
-require_once __DIR__ . '/../footer.php';
+require_once __DIR__ . '/footer.php';
 ?>
 
 </html>

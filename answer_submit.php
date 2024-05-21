@@ -23,6 +23,7 @@ require_once __DIR__ . '/newNav.php';
             <input type="file"><br>
             <button type="submit" class="answer_button" onclick="location.href='./answer.php'" >回答する</button>
             <?php
+            include 'db_connect.php'; 
             session_start();
             if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_SESSION['user_id'])) {
                 $user_id = $_SESSION['user_id'];

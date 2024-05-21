@@ -20,95 +20,61 @@
 <body>
     <h1>プロフィール確認</h1>
     <?php
-    include '../db_connect.php'; // Ensure the database connection script is included
+    include '../db_connect.php'; // Include the database connection script
 
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-        $target_dir = "profileicon/"; // Directory where the files will be saved
-        $target_file = $target_dir . basename($_FILES["profile_image"]["name"]);
-        $uploadOk = 1;
-        $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
+        $email = $_POST['email'];
+        $password = password_hash($_POST['password'], PASSWORD_DEFAULT); // Secure password hashing
+        $profile_image = $_FILES['profile_image']['name'];
+        $name = $_POST['name'];
+        $course = $_POST['course'];
+        $singleword = $_POST['singleword'];
 
-        // Check if image file is an actual image or fake image
-        $check = getimagesize($_FILES["profile_image"]["tmp_name"]);
-        if ($check !== false) {
-            $uploadOk = 1;
+        // Check if email already exists
+        $checkEmailSql = "SELECT id FROM users WHERE email = ?";
+        $stmt = $conn->prepare($checkEmailSql);
+        $stmt->bind_param("s", $email);
+        $stmt->execute();
+        $stmt->store_result();
+
+        if ($stmt->num_rows > 0) {
+            // Email already exists
+            echo "This email is already registered. Please use a different email.";
+            echo "<button onclick=\"location.href='register.php'\">戻る</button>";
         } else {
-            echo "File is not an image.";
-            $uploadOk = 0;
-        }
+            // Move the uploaded profile image to the server
+            $target_dir = "profileicon/";
+            $target_file = $target_dir . basename($_FILES["profile_image"]["name"]);
+            move_uploaded_file($_FILES["profile_image"]["tmp_name"], $target_file);
 
-        // Check if file already exists
-        //if (file_exists($target_file)) {
-        //    echo "Sorry, file already exists.";
-        //    $uploadOk = 0;
-        //}
+            // Insert user into the database
+            $insertSql = "INSERT INTO users (email, password, profile_image, name, course, singleword) 
+                        VALUES (?, ?, ?, ?, ?, ?)";
+            $stmt = $conn->prepare($insertSql);
+            $stmt->bind_param("ssssss", $email, $password, $profile_image, $name, $course, $singleword);
 
-        // Check file size
-        if ($_FILES["profile_image"]["size"] > 500000) { // 500KB limit
-            echo "Sorry, your file is too large.";
-            $uploadOk = 0;
-        }
-
-        // Check if $uploadOk is set to 0 by an error
-        if ($uploadOk == 0) {
-            echo "Sorry, your file was not uploaded.";
-        // If everything is ok, try to upload file
-        } else {
-            if (move_uploaded_file($_FILES["profile_image"]["tmp_name"], $target_file)) {
-                echo "The file ". basename($_FILES["profile_image"]["name"]). " has been uploaded.";
-
-                // Retrieve form data
-                $profile_image = $target_file; // Store the file path in the database
-                $name = $_POST['name'];
-                $course = $_POST['course'];
-                $singleword = $_POST['singleword'];
-                $email = $_POST['email'];
-                $password = $_POST['password'];
-                $confirm_password = $_POST['confirm_password'];
-
-                // Check if passwords match
-                if ($password !== $confirm_password) {
-                    die('Passwords do not match.');
-                }
-
-                // Hash the password
-                $hashed_password = password_hash($password, PASSWORD_DEFAULT);
-
-                // Check if all required fields are filled
-                if ($name && $course && $singleword && $email && $hashed_password) {
-                    $sql = "INSERT INTO users (email, password, profile_image, name, course, singleword) 
-                            VALUES ('$email', '$hashed_password', '$profile_image', '$name', '$course', '$singleword')";
-
-                    if ($conn->query($sql) === TRUE) {
-                        echo "Registration successful!";
-                    } else {
-                        echo "Error: " . $sql . "<br>" . $conn->error;
-                    }
-                } else {
-                    echo "Please fill in all fields.";
-                }
+            if ($stmt->execute()) {
+                echo "Registration successful!";
+                // 受け取ったデータを表示
+                echo "<p><strong>名前:</strong> $name</p>";
+                echo "<p><strong>学科:</strong> $course</p>";
+                echo "<p><strong>一言:</strong> $singleword</p>";
+                echo "<p><strong>メールアドレス:</strong> $email</p>";
+                // 画像プレビューなども表示する場合はここで追加
+                echo "<p><strong>プロフィール画像:</strong><br><img src='$profile_image' class='profile_image'></p>";
+                //header("Location: login.php"); // Redirect to the login page after successful registration
+                echo "<button onclick=\"location.href='result.php'\">新規作成</button>";
+                exit;
             } else {
-                echo "Sorry, there was an error uploading your file.";
+                echo "Error: " . $stmt->error;
             }
         }
+
+        $stmt->close();
     }
-
-    // ファイルを一時的な場所に移動して保存
-    $temp_image = $_FILES['profile_image']['tmp_name'];
-    $final_image = $target_dir . uniqid() . '.' . $imageFileType;
-    move_uploaded_file($temp_image, $final_image);
-
-    // 受け取ったデータを表示
-    echo "<p><strong>名前:</strong> $name</p>";
-    echo "<p><strong>学科:</strong> $course</p>";
-    echo "<p><strong>一言:</strong> $singleword</p>";
-    echo "<p><strong>メールアドレス:</strong> $email</p>";
-    // 画像プレビューなども表示する場合はここで追加
-    echo "<p><strong>プロフィール画像:</strong><br><img src='$final_image' class='profile_image'></p>";
 
     $conn->close();
     ?>
-    <button onclick="location.href='result.php'">新規作成</button>
 
 </body>
 

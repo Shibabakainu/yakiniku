@@ -14,16 +14,7 @@
 <div id="goodCountButtonContainer"></div>
 
 <?php
-$servername = "localhost";
-$username = "username";
-$password = "password";
-$dbname = "yakiniku";
-
-$connect = new mysqli($servername, $username, $password, $dbname);
-
-if ($connect->connect_error) {
-    die("Connection failed: " . $connect->connect_error);
-}
+include 'db_connect.php'; 
 
 $order = isset($_GET['order']) ? $_GET['order'] : 'asc';
 
@@ -33,7 +24,7 @@ $sql = "SELECT answer_comments.comment, users.email, users.name, users.id AS use
         FROM answer_comments
         JOIN users ON answer_comments.user_id = users.id
         ORDER BY timestamp $order";
-$result = $connect->query($sql);
+$result = $conn->query($sql);
 if($result->num_rows > 0) {
     while($row = $result->fetch_assoc()) {
         echo "<tr class='target' data-id='" .$row['id']. "'>";
@@ -51,7 +42,7 @@ if($result->num_rows > 0) {
     echo " ";
 }
 
-$connect->close();
+$conn->close();
 ?>
 
 <link rel="stylesheet" href="styles/icon.css">

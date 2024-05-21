@@ -79,7 +79,7 @@
                 if (password_verify($password, $hashed_password)) {
                     // Password is correct, start a session
                     $_SESSION['user_id'] = $user_id;
-                    header('Location: profile.php'); // Redirect to the profile page
+                    header('Location: ../profile.php'); // Redirect to the profile page
                     exit;
                 } else {
                     echo "Invalid email or password.";
@@ -90,13 +90,9 @@
 
             $stmt->close();
         }
-
         $conn->close();
-        ?>
-
-            
+        ?>          
         <a href="register.php">新規作成</a>
-
     </div>
 </body>
 </html>
