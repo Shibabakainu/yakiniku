@@ -14,35 +14,34 @@
 <div id="goodCountButtonContainer"></div>
 
 <?php
-include 'db_connect.php'; 
+    include 'db_connect.php'; 
 
-$order = isset($_GET['order']) ? $_GET['order'] : 'asc';
+    $order = isset($_GET['order']) ? $_GET['order'] : 'asc';
 
 
-//コメント表示
-$sql = "SELECT answer_comments.comment, users.email, users.name, users.id AS user_id, timestamp
-        FROM answer_comments
-        JOIN users ON answer_comments.user_id = users.id
-        ORDER BY timestamp $order";
-$result = $conn->query($sql);
-if($result->num_rows > 0) {
-    while($row = $result->fetch_assoc()) {
-        echo "<tr class='target' data-id='" .$row['id']. "'>";
-        echo    "<td>";       
-        echo    "<img src='profile/profileicon/6628913fb7d1d.jpg' class='profile_image'>";            
-        echo    "<p><strong><a href='profile.php?id=" . $row['user_id'] . "'>" . htmlspecialchars($row['name']) ."<br></p>";
-        echo    "<p class='comment'>" . htmlspecialchars($row['comment']) . "</p>";                            
-        require __DIR__ . '/GoodCountButtonDB.php';                
-
-        echo    "<p class='time'>投稿日時: " . $row['timestamp'] . "</p>";
-        echo "</td>";
-        echo "</tr>";
+    //コメント表示
+    $sql = "SELECT answer_comments.comment, users.email, users.name, users.id AS user_id, timestamp
+            FROM answer_comments
+            JOIN users ON answer_comments.user_id = users.id
+            ORDER BY timestamp $order";
+    $result = $conn->query($sql);
+    if($result->num_rows > 0) {
+        while($row = $result->fetch_assoc()) {
+            echo "<tr class='target' data-id='" .$row['id']. "'>";
+            echo    "<td>";       
+            echo    "<img src='profile/profileicon/6628913fb7d1d.jpg' class='profile_image'>";            
+            echo    "<p><strong><a href='profile.php?id=" . $row['user_id'] . "'>" . htmlspecialchars($row['name']) ."<br></p>";
+            echo    "<p class='comment'>" . htmlspecialchars($row['comment']) . "</p>";                            
+            require __DIR__ . '/GoodCountButtonDB.php';
+            echo    "<p class='time'>投稿日時: " . $row['timestamp'] . "</p>";
+            echo "</td>";
+            echo "</tr>";
+        }
+    } else {
+        echo " ";
     }
-} else {
-    echo " ";
-}
 
-$conn->close();
+    $conn->close();
 ?>
 
 <link rel="stylesheet" href="styles/icon.css">
