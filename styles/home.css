@@ -31,7 +31,8 @@ body {
 }
 
 .wrap {
-    width: 80%;
+    text-align: center;
+    width: 90%;
     margin: auto;
     padding-top: 1px;
     background-color: #c4e4f5;
