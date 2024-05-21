@@ -11,7 +11,7 @@
     <nav>
         <ul>
             <li><a href="home.php"><span class="material-symbols-outlined">home</span>ホーム</a></li>
-            <li><a href="demoprofile.php"><span class="material-symbols-outlined">account_circle</span>プロフィール</a></li>
+            <li><a href="profile.php"><span class="material-symbols-outlined">account_circle</span>プロフィール</a></li>
             <li><a href="view.php"><span class="material-symbols-outlined">preview</span>記事の閲覧</a></li>
             <li><a href="question_list.php"><span class="material-symbols-outlined">quick_reference_all</span>質問の閲覧</a></li>
             <li><a href="upload.php"><span class="material-symbols-outlined">drive_folder_upload</span>記事を作成</a></li>
