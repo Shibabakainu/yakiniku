@@ -10,12 +10,12 @@
 <body>
     <nav>
         <ul>
-            <li><a href="home.php"><span class="material-symbols-outlined">home</span>ホーム</a></li>
-            <li><a href="profile.php"><span class="material-symbols-outlined">account_circle</span>プロフィール</a></li>
-            <li><a href="view.php"><span class="material-symbols-outlined">preview</span>記事の閲覧</a></li>
-            <li><a href="question_list.php"><span class="material-symbols-outlined">quick_reference_all</span>質問の閲覧</a></li>
-            <li><a href="upload.php"><span class="material-symbols-outlined">drive_folder_upload</span>記事を作成</a></li>
-            <li><a href="question.php"><span class="material-symbols-outlined">quiz</span>質問を投稿</a></li>
+        <li><a href="home.php" class="navLink"><span class="material-symbols-outlined">home</span>ホーム</a></li>
+        <li><a href="profile.php" class="navLink"><span class="material-symbols-outlined">account_circle</span>プロフィール</a></li>
+        <li><a href="view.php" class="navLink"><span class="material-symbols-outlined">preview</span>記事の閲覧</a></li>
+        <li><a href="question_list.php" class="navLink"><span class="material-symbols-outlined">quick_reference_all</span>質問の閲覧</a></li>
+        <li><a href="upload.php" class="navLink"><span class="material-symbols-outlined">drive_folder_upload</span>記事を作成</a></li>
+        <li><a href="question.php" class="navLink"><span class="material-symbols-outlined">quiz</span>質問を投稿</a></li>
         </ul>
         <button id="modalButton" class="logoutButton"><span class="material-symbols-outlined">logout</span></button>
     </nav>
