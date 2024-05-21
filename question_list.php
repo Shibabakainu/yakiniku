@@ -32,7 +32,14 @@ require_once __DIR__ . '/newNav.php';
         }
 
         .contentTitle {
-            text-align: left;
+            color: black;
+            padding: 0px;
+            text-decoration:none;
+            transition: color .3s;
+        }
+
+        .contentTitle:hover {
+            color: deepskyblue;
         }
     </style>
 </head>
@@ -65,28 +72,28 @@ require_once __DIR__ . '/newNav.php';
                     <td>質問タイトル</td>
                     <th>未/済</th>
                 </tr>
-                <tr bgcolor="#ffffff" class="target" data-category="C">
-                    <td><a href="./answer.php" class="contentTitle"><span style="color: black;">C言語のループ処理について</span></a></td>
+                <tr bgcolor="#ffffff" class="target" data-category="C" style="text-align: left;">
+                    <td><a href="./answer.php" class="contentTitle">C言語のループ処理について</a></td>
                     <th>未回答</th>
                 </tr>
-                <tr bgcolor="#ffffff" class="target" data-category="AI">
-                    <td><a href="./answer.php" class="contentTitle"><span style="color: black;">機械学習について</span></a></td>
+                <tr bgcolor="#ffffff" class="target" data-category="AI" style="text-align: left;">
+                    <td><a href="./answer.php" class="contentTitle">機械学習について</a></td>
                     <th>回答済</th>
                 </tr>
-                <tr bgcolor="#ffffff" class="target" data-category="Python">
-                    <td><a href="./answer.php" class="contentTitle"><span style="color: black;">Pythonでリスト内包表記を使うと何が便利なの？</span></a></td>
+                <tr bgcolor="#ffffff" class="target" data-category="Python" style="text-align: left;">
+                    <td><a href="./answer.php" class="contentTitle">Pythonでリスト内包表記を使うと何が便利なの？</a></td>
                     <th>回答済</th>
                 </tr>
-                <tr bgcolor="#ffffff" class="target" data-category="Java">
-                    <td><a href="./answer.php" class="contentTitle"><span style="color: black;">Javaのラムダ式とは何ですか</span></a></td>
+                <tr bgcolor="#ffffff" class="target" data-category="Java" style="text-align: left;">
+                    <td><a href="./answer.php" class="contentTitle">Javaのラムダ式とは何ですか</a></td>
                     <th>未回答</th>
                 </tr>
-                <tr bgcolor="#ffffff" class="target" data-category="Web">
-                    <td><a href="./answer.php" class="contentTitle"><span style="color: black;">CookieとSessionの違いは何ですか？それぞれどのように使用されますか？</span></a></td>
+                <tr bgcolor="#ffffff" class="target" data-category="Web" style="text-align: left;">
+                    <td><a href="./answer.php" class="contentTitle">CookieとSessionの違いは何ですか？それぞれどのように使用されますか？</a></td>
                     <th>未回答</th>
                 </tr>
-                <tr bgcolor="#ffffff" class="target" data-category="AWS">
-                    <td><a href="./answer.php" class="contentTitle"><span style="color: black;">AWSとは何ですか 主なサービスや利点は何ですか</span></a></td>
+                <tr bgcolor="#ffffff" class="target" data-category="AWS" style="text-align: left;">
+                    <td><a href="./answer.php" class="contentTitle">AWSとは何ですか 主なサービスや利点は何ですか</a></td>
                     <th>回答済</th>
                 </tr>
             </table>
