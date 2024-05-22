@@ -1,5 +1,6 @@
 
 <link rel="stylesheet" href="styles/GoodCountButtonDB.css"> <!-- GoodCountButton.cssを読み込む -->
+<link rel="stylesheet" href="styles/answer_comments_display.css">
 <script>
     // 順序を変更する関数
     function changeOrder(order) {
@@ -15,7 +16,7 @@
 <div id="goodCountButtonContainer"></div>
 
 <?php
-    include 'db_connect.php'; 
+    include 'db_connect.php';
 
     $order = isset($_GET['order']) ? $_GET['order'] : 'asc';
 
@@ -31,11 +32,11 @@
     if ($result->num_rows > 0) {
         while ($row = $result->fetch_assoc()) {
             echo "<tr class='target' bgcolor='#ffffff' data-id='" . $row['user_id'] . "'>";
-            echo    "<td>";       
-            echo    "<img src='profile/profileicon/" . htmlspecialchars($row['profile_image']) . "' class='profile_image'>";            
-            echo    "<p><strong><a href='profile.php?id=" . $row['user_id'] . "'>" . htmlspecialchars($row['name']) . "</a></strong></p>";
-            echo    "<p class='comment'>" . htmlspecialchars($row['comment']) . "</p>";                            
-            require __DIR__ . '/GoodCountButtonDB.php';                
+            echo    "<td>";
+            echo    "<img src='profile/profileicon/" . htmlspecialchars($row['profile_image']) . "' class='profile_image'>";
+            echo    "<p class=comment><strong><a href='profile.php?id=" . $row['user_id'] . "'>" . htmlspecialchars($row['name']) . "</a></strong></p>";
+            echo    "<p class='comment'>" . htmlspecialchars($row['comment']) . "</p>";
+            require __DIR__ . '/GoodCountButtonDB.php';
             echo    "<p class='time'>投稿日時: " . $row['timestamp'] . "</p>";
             echo    "</td>";
             echo "</tr>";
@@ -50,14 +51,6 @@
 <link rel="stylesheet" href="styles/icon.css">
 <script>
     document.addEventListener('DOMContentLoaded', function() {
-        // アイコンがクリックされたときの処理
-        document.querySelectorAll('.profile_image').forEach(icon => {
-            icon.addEventListener('click', function() {
-                const commentId = this.closest('.target').getAttribute('data-id');
-                window.location.href = 'demo_otherprofile.php?id=' + commentId;
-            });
-        });
-
         // いいねボタンの処理
         document.querySelectorAll('.likeButton').forEach(button => {
             let likeCountSpan = button.querySelector('.likeCount');

@@ -56,15 +56,6 @@ require_once __DIR__ . '/newNav.php';
 
     <input type="button" class="answer_button" onclick="location.href='./answer_submit.php'" value="回答する">
 
-    <script>
-        // アイコンがクリックされたときの処理
-        document.querySelectorAll('.profile_image').forEach(icon => {
-            icon.addEventListener('click', function() {
-                const commentId = this.parentElement.getAttribute('data-id');
-                window.location.href = 'demo_otherprofile.php?id=' + commentId;
-            });
-        });
-    </script>
     </div>
 </body>
 
