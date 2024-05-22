@@ -30,7 +30,7 @@
 
     if ($result->num_rows > 0) {
         while ($row = $result->fetch_assoc()) {
-            echo "<tr class='target' data-id='" . $row['user_id'] . "'>";
+            echo "<tr class='target' bgcolor='#ffffff' data-id='" . $row['user_id'] . "'>";
             echo    "<td>";       
             echo    "<img src='profile/profileicon/" . htmlspecialchars($row['profile_image']) . "' class='profile_image'>";            
             echo    "<p><strong><a href='profile.php?id=" . $row['user_id'] . "'>" . htmlspecialchars($row['name']) . "</a></strong></p>";
