@@ -117,11 +117,14 @@ require_once __DIR__ . '/newNav.php'; // ルートディレクトリからの相
             }
             $stmt->close();
             $conn->close();
-            ?>
+            
 
-            <!-- 編集ボタンをユーザーのデータの下に配置 -->
-            <a href='identification.php' class="edit_button">編集</a>
-        </div>
+            //編集ボタンをユーザーのデータの下に配置
+            if (isset($_SESSION['user_id']) && $_SESSION['user_id'] == $user_id) {
+            echo "<a href='identification.php' class='edit_button'>編集</a>";
+            }
+            ?>    
+    </div>
 
     <br><br> <!-- ボタンとテーブルの間に適切な間隔を設定 -->
 
