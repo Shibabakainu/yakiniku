@@ -97,13 +97,13 @@
             <input type="password" id="confirm_password" name="confirm_password" oninput="checkPasswordMatch()"><br>
             <div id="passwordMismatch">パスワードが一致しません</div><br>
 
-            <input type="button" value="保存" onclick="showCustomAlert()">
+            <input type="button" value="作成" onclick="showCustomAlert()">
         </form>
     </div>
 
     <div id="overlay"></div>
     <div id="customAlert">
-        <p>この内容で保存しますか？</p>
+        <p>この内容で作成しますか？</p>
         <button id="confirmButton">はい</button>
         <button id="cancelButton">いいえ</button>
     </div>

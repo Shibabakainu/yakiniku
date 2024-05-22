@@ -48,7 +48,7 @@
             move_uploaded_file($_FILES["profile_image"]["tmp_name"], $target_file);
 
             // Insert user into the database
-            $insertSql = "INSERT INTO users (email, password, profile_image, name, course, singleword) 
+            $insertSql = "INSERT INTO users (email, password, profile_image, name, course, singleword)
                         VALUES (?, ?, ?, ?, ?, ?)";
             $stmt = $conn->prepare($insertSql);
             $stmt->bind_param("ssssss", $email, $password, $profile_image, $name, $course, $singleword);
@@ -78,7 +78,7 @@
             // Get the last inserted user ID
             $user_id = $stmt->insert_id;
             // Redirect to the profile page with user ID
-            header("Location: ../profile.php?id=$user_id");
+            header("Location: ../profile/login.php?id=$user_id");
             exit;
             } else {
                 echo "Error: " . $stmt->error;
