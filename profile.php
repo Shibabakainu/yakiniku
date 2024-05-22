@@ -65,10 +65,17 @@ require_once __DIR__ . '/newNav.php'; // ルートディレクトリからの相
             padding: 0px;
             text-decoration:none;
             transition: color .3s;
+            text-decoration: none;
+            background-image: linear-gradient(90deg, deepskyblue, deepskyblue);
+            background-size: 0 1px;
+            background-position: left bottom;
+            background-repeat: no-repeat;
+            transition: all .3s;
         }
 
         .contentTitle:hover {
             color: deepskyblue;
+            background-size: 100% 1px;
         }
     </style>
 </head>
