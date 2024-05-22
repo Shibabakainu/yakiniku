@@ -58,6 +58,18 @@ require_once __DIR__ . '/newNav.php'; // ルートディレクトリからの相
         .profile {
             text-align: center;
         }
+
+        .contentTitle {
+            color: black;
+            text-align: left;
+            padding: 0px;
+            text-decoration:none;
+            transition: color .3s;
+        }
+
+        .contentTitle:hover {
+            color: deepskyblue;
+        }
     </style>
 </head>
 
@@ -113,21 +125,30 @@ require_once __DIR__ . '/newNav.php'; // ルートディレクトリからの相
             <td width="400px">タイトル</td>
             <td width="800px">作品の説明</td>
         </tr>
-        <?php
-        for ($i = 0; $i < 4; $i++) {
-            if ($i % 2 == 0) {
-                echo "<tr bgcolor=" . "#ffffff" .">";
-                echo '<td><a href="./detail.php"><span style="color: black;">あいうえお</span></a></td>';   // タイトル
-                echo "<th>あかさたなはまやらわ</th>";   // 作品詳細
-                echo "</tr>";
-            } else {
-                echo "<tr bgcolor=" . "#f5f5f5" . ">";
-                echo '<td><a href="./detail.php"><span style="color: black;">abcde</span></a></td>';    // タイトル
-                echo "<th>abcdefghijklmn</th>"; // 作品詳細
-                echo "</tr>";
-            }
-        }
-        ?>
+        <tr bgcolor="ffffff">
+            <td><a href="Poster.php" class="contentTitle" class="contentTitle">ChatGPTに聞いてみた！</span></a></td>
+            <th style="text-align: left;">
+                ChatGPTに今話題のスクラム開発について聞いてみた！
+            </th>
+        </tr>
+        <tr bgcolor="ffffff">
+            <td><a href="question_detail.php" class="contentTitle">「ゼロから始める機械学習」: 機械学習入門ガイド</span></a></td>
+            <th style="text-align: left;">
+                この記事では、機械学習の基本から応用までを解説します。アルゴリズム、データセット、モデルの選択方法などについて詳しく説明します。
+            </th>
+        </tr>
+        <tr bgcolor="ffffff">
+            <td><a href="question_detail.php" class="contentTitle">「最新のフロントエンド開発トレンド」: 2023年版</span></a></td>
+            <th style="text-align: left;">
+                フロントエンド開発の最新トレンドを紹介する記事です。Webコンポーネント、TypeScript、モバイルフレームワークなどに焦点を当てています。
+            </th>
+        </tr>
+        <tr bgcolor="ffffff">
+            <td><a href="question_detail.php" class="contentTitle">初心者向けC言語入門ガイド</span></a></td>
+            <th style="text-align: left;">
+                本記事は、プログラミング初心者向けにC言語の基本を解説する入門ガイドです。
+            </th>
+            </tr>
     </table>
 
     <p class="view_p">作成した質問一覧</p>
@@ -137,26 +158,26 @@ require_once __DIR__ . '/newNav.php'; // ルートディレクトリからの相
             <td width="800px">質問の内容</td>
         </tr>
         <tr bgcolor="ffffff">
-            <td><a href="Poster.php"><span style="color: black;">pythonの課題について</span></a></td>
-            <th>
+            <td><a href="Poster.php" class="contentTitle">pythonの課題について</a></td>
+            <th style="text-align: left;">
                 辞書型がよくわかりません
             </th>
         </tr>
         <tr bgcolor="f5f5f5">
-            <td><a href="question_detail.php"><span style="color: black;">「急募」就活の必勝法</span></a></td>
-            <th>
+            <td><a href="question_detail.php" class="contentTitle">「急募」就活の必勝法</a></td>
+            <th style="text-align: left;">
                 共に働けるイメージを沸かすしかないのでしょうか？
             </th>
         </tr>
         <tr bgcolor="ffffff">
-            <td><a href="question_detail.php"><span style="color: black;">おすすめの本を教えてください</span></a></td>
-            <th>
+            <td><a href="question_detail.php" class="contentTitle">おすすめの本を教えてください</a></td>
+            <th style="text-align: left;">
                 おすすめの本を教えてください
             </th>
         </tr>
         <tr bgcolor="f5f5f5">
-        <td><a href="question_detail.php"><span style="color: black;">AIに愛を教えたい</span></a></td>
-        <th>
+        <td><a href="question_detail.php" class="contentTitle">AIに愛を教えたい</a></td>
+        <th style="text-align: left;">
             どのような愛が適切だと思いますか？(恋愛、隣人愛等)
         </th>
         </tr>
