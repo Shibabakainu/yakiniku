@@ -1,6 +1,4 @@
-<?php
-session_start();
-?>
+
 <link rel="stylesheet" href="styles/GoodCountButtonDB.css"> <!-- GoodCountButton.cssを読み込む -->
 <script>
     // 順序を変更する関数
@@ -23,7 +21,7 @@ session_start();
 
 
     //コメント表示
-    $sql = "SELECT answer_comments.comment, users.email, users.name, users.id AS user_id, timestamp
+    $sql = "SELECT answer_comments.comment, users.profile_image, users.email, users.name, users.id AS user_id, timestamp
             FROM answer_comments
             JOIN users ON answer_comments.user_id = users.id
             ORDER BY timestamp $order";
@@ -34,7 +32,7 @@ session_start();
         while ($row = $result->fetch_assoc()) {
             echo "<tr class='target' data-id='" . $row['user_id'] . "'>";
             echo    "<td>";       
-            echo    "<img src='" . htmlspecialchars($row['profile_image']) . "' class='profile_image'>";            
+            echo    "<img src='profile/profileicon/" . htmlspecialchars($row['profile_image']) . "' class='profile_image'>";            
             echo    "<p><strong><a href='profile.php?id=" . $row['user_id'] . "'>" . htmlspecialchars($row['name']) . "</a></strong></p>";
             echo    "<p class='comment'>" . htmlspecialchars($row['comment']) . "</p>";                            
             require __DIR__ . '/GoodCountButtonDB.php';                
