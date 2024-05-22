@@ -4,9 +4,6 @@ body {
     margin: 0;
 }
 .wrap {
-    /*width: 80%;
-    margin-right: auto;
-    margin-left: auto;*/
     padding: 1px 30px;
     background-color: #c4e4f5;
     height: 100%;
@@ -25,10 +22,6 @@ body {
     color: white;
 }
 
-.name {
-    text-align: right;
-    margin-right: 20px;
-}
 
 .image {
     background-color: azure;
@@ -56,5 +49,14 @@ p {
 }
 
 #comments {
-    padding-bottom: 50px;
+    background-color:lightblue;
+    padding: 20px;
+    margin-bottom: 50px;
+    border:black 1px;
+    border-style: solid ;
+    border-radius: 10px;
+}
+
+#name {
+    margin-left: 30px;
 }

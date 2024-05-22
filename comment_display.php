@@ -1,6 +1,6 @@
 <style>
 .name {
-        font-size: 12px; /* フォントサイズを変更 */
+        font-size: 18px; /* フォントサイズを変更 */
         font-weight: bold;
     }
 .comment small {
@@ -30,33 +30,22 @@ body{
     <input type="radio" name="order" value="desc" onchange="changeOrder('desc')"> 新しい順
 </form>
 <?php
-include 'db_connect.php'; 
-//$order = $_GET['order']; // JavaScriptから渡される選択された順序
-$order = isset($_GET['order']) ? $_GET['order'] : 'asc';
-$sql = "SELECT id, name, comment, timestamp FROM comments ORDER BY timestamp $order";
-$result = $conn->query($sql);
-//コメント表示
-//echo "<span class='icon' data-id='" . "'><img src='profile/profileicon/662b12c596ba3.jpg' class='profile_image' alt='icon'></span>" . "石より硬い岸本" . "<br><div class='comment-text' style='margin-left: 29px;'>" . "いいね" . "</div><small>投稿日時: " . "demo-de-mo de:mo:00" . "</small>";
-if($result->num_rows > 0) {
-    while($row = $result->fetch_assoc()) {
-        echo "<div class='comment'>";
-        echo "<span class='icon' data-id='" . $row['id'] . "'><img src='profile/profileicon/6625c9866671f.jpg' class='profile_image' alt='icon'></span>" . "<span class='name'>" . htmlspecialchars($row['name']) . "</span><br><div class='comment-text' style='margin-left: 29px;'>" . htmlspecialchars($row['comment']) . "</div><small>投稿日時: " . $row['timestamp'] . "</small>";
-        echo "</div>";
+    include 'db_connect.php'; 
+    //$order = $_GET['order']; // JavaScriptから渡される選択された順序
+    $order = isset($_GET['order']) ? $_GET['order'] : 'asc';
+    $sql = "SELECT id, name, comment, timestamp FROM comments ORDER BY timestamp $order";
+    $result = $conn->query($sql);
+    //コメント表示
+    if($result->num_rows > 0) {
+        while($row = $result->fetch_assoc()) {
+            echo "<div class='comment'>";
+            echo "<span class='name'>" . htmlspecialchars($row['name']) . "</span><br><div class='comment-text' style='margin-left: 29px;'>" . htmlspecialchars($row['comment']) . "</div><small>投稿日時: " . $row['timestamp'] . "</small>";
+            echo "</div>";
+        }
+    } else {
+        echo "まだコメントはありません。";
     }
-} else {
-    echo "まだコメントはありません。";
-}
-echo "</div>";
+    echo "</div>";
 
-$conn->close();
+    $conn->close();
 ?>
-<link rel="stylesheet" href="styles/icon.css">
-<script>
-    // アイコンがクリックされたときの処理
-    document.querySelectorAll('.icon img.profile_image').forEach(icon => {
-        icon.addEventListener('click', function() {
-            const commentId = this.parentElement.getAttribute('data-id');
-            window.location.href = 'demo_otherprofile.php?id=' + commentId;
-        });
-    });
-</script>
