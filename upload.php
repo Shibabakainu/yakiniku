@@ -32,7 +32,7 @@ require_once __DIR__ . '/newNav.php';
             <input type="file" accept=".jpg, .png">
             <h4>ファイルのアップロード</h4>
             <input type="file"><br>
-            <input class="submit_button" type="submit" value="投稿する">
+            <button type="submit" class="submit_button">投稿</button>
 
         </form>
         <!--<button onclick="AlertAndRedirect()">投稿する</button>-->

@@ -1,10 +1,22 @@
+<?php
+session_start(); // セッションを開始します（必要に応じて）
+
+require_once __DIR__ . '/newnav.php';
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $password = $_POST["password"];
+    if (strpos($password, "and") === false) {
+        $error_message = "パスワードが一致しません";
+    } else {
+        // パスワードが一致した場合は編集画面へリダイレクトする
+        header("Location: demo_edit_profile.php");
+        exit; // リダイレクト後にスクリプトの実行を終了する
+    }
+}
+?>
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<?php
-
-require_once __DIR__ . '/newnav.php';
-?>
     <meta charset="UTF-8">
     <title>ログイン画面</title>
     <style>
@@ -48,6 +60,11 @@ require_once __DIR__ . '/newnav.php';
         .container input[type="submit"]:hover {
             background-color: #0056b3;
         }
+        .error {
+            color: red;
+            margin-top: 5px;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
@@ -56,22 +73,12 @@ require_once __DIR__ . '/newnav.php';
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
             <input type="password" name="password" placeholder="パスワード" required>
             <?php
-            // フォームが送信された場合の処理
-            if ($_SERVER["REQUEST_METHOD"] == "POST") {
-                $password = $_POST["password"];
-                if (strpos($password, "and") === false) {
-                    // パスワードが "and" を含まない場合はエラーメッセージを表示する
-                    echo "<div style='color: red; margin-top: 5px;'>パスワードが一致しません</div>";
-                }else {
-                    // パスワードが一致した場合は編集画面へリダイレクトする
-                    header("Location: demo_edit_profile.php");
-                    exit; // リダイレクト後にスクリプトの実行を終了する
-                }
+            if (isset($error_message)) {
+                echo "<div class='error'>$error_message</div>";
             }
             ?>
             <input type="submit" value="ログイン">
         </form>
-
     </div>
 </body>
 </html>
