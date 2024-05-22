@@ -11,7 +11,7 @@
     <p class="top">アカウント情報を変更しました</p>
     <h2>パスワードを変更しました</h2>
     <p>パスワードの変更が完了しました。引き続きサービスをお使いください。</p>
-    <input type="button" class="return_button" onclick="location.href='./login.php'" value="戻る">
+    <input type="button" class="return_button" onclick="location.href='./profile/login.php'" value="戻る">
 </body>
 
 </html>
