@@ -81,28 +81,28 @@ require_once __DIR__ . '/newNav.php';
                     <th>未/済</th>
                 </tr>
                 <tr bgcolor="#ffffff" class="target" data-category="C" style="text-align: left;">
-                    <td><a href="./answer.php" class="contentTitle">C言語のループ処理について</a></td>
-                    <th>未回答</th>
+                    <td style="text-align: left; font-size: 180%; padding: 10px;"><a href="./answer.php" class="contentTitle">C言語のループ処理について</a></td>
+                    <th style="text-align: center;">未回答</th>
                 </tr>
                 <tr bgcolor="#ffffff" class="target" data-category="AI" style="text-align: left;">
-                    <td><a href="./answer.php" class="contentTitle">機械学習について</a></td>
-                    <th>回答済</th>
+                    <td style="text-align: left; font-size: 180%; padding: 10px;"><a href="./answer.php" class="contentTitle">機械学習について</a></td>
+                    <th style="text-align: center;">回答済</th>
                 </tr>
                 <tr bgcolor="#ffffff" class="target" data-category="Python" style="text-align: left;">
-                    <td><a href="./answer.php" class="contentTitle">Pythonでリスト内包表記を使うと何が便利なの？</a></td>
-                    <th>回答済</th>
+                    <td style="text-align: left; font-size: 180%; padding: 10px;"><a href="./answer.php" class="contentTitle">Pythonでリスト内包表記を使うと何が便利なの？</a></td>
+                    <th style="text-align: center;">回答済</th>
                 </tr>
                 <tr bgcolor="#ffffff" class="target" data-category="Java" style="text-align: left;">
-                    <td><a href="./answer.php" class="contentTitle">Javaのラムダ式とは何ですか</a></td>
-                    <th>未回答</th>
+                    <td style="text-align: left; font-size: 180%; padding: 10px;"><a href="./answer.php" class="contentTitle">Javaのラムダ式とは何ですか</a></td>
+                    <th style="text-align: center;">未回答</th>
                 </tr>
                 <tr bgcolor="#ffffff" class="target" data-category="Web" style="text-align: left;">
-                    <td><a href="./answer.php" class="contentTitle">CookieとSessionの違いは何ですか？それぞれどのように使用されますか？</a></td>
-                    <th>未回答</th>
+                    <td style="text-align: left; font-size: 180%; padding: 10px;"><a href="./answer.php" class="contentTitle">CookieとSessionの違いは何ですか？それぞれどのように使用されますか？</a></td>
+                    <th style="text-align: center;">未回答</th>
                 </tr>
                 <tr bgcolor="#ffffff" class="target" data-category="AWS" style="text-align: left;">
-                    <td><a href="./answer.php" class="contentTitle">AWSとは何ですか 主なサービスや利点は何ですか</a></td>
-                    <th>回答済</th>
+                    <td style="text-align: left; font-size: 180%; padding: 10px;"><a href="./answer.php" class="contentTitle">AWSとは何ですか 主なサービスや利点は何ですか</a></td>
+                    <th style="text-align: center;">回答済</th>
                 </tr>
             </table>
         </div>
