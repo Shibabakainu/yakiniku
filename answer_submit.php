@@ -36,7 +36,7 @@ require_once __DIR__ . '/newNav.php';
                     echo "Error: " . $sql . "<br>" . $conn->error;
                 }
             } else {
-                echo "You must be logged in to comment.";
+                echo "  ";
             }
 
             $conn->close();

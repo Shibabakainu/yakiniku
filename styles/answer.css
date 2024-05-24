@@ -124,7 +124,7 @@ img.profile_image {
     border-radius: 50%;
     /* 円形にする */
     float: left;
-    margin-right: 50px;
+    margin: 20px;
 
 }
 

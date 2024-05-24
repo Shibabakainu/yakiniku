@@ -33,10 +33,9 @@ require_once __DIR__ . '/newNav.php';
             <?php
                 require_once __DIR__ . '/GoodButton.php';   // グッドボタンの呼び出し
             ?>
-
-
+            <div style="text-align: center;">
                 <input type="button" class="return_button" onclick="location.href='./view.php'" value="戻る">
-
+            </div>
         </form>
         <h2>コメント入力</h2>
         <!-- コメント入力 -->
