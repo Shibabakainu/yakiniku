@@ -27,7 +27,7 @@ require_once __DIR__ . '/newNav.php';
         }
 
         th {
-            font-size: 100%;
+            font-size: 130%;
         }
     </style>
 </head>
@@ -61,7 +61,7 @@ require_once __DIR__ . '/newNav.php';
                     <td width="800px">記事の概要</td>
                 </tr>
                 <tr class="target" data-category="AI" bgcolor="#ffffff">
-                    <td style="text-align: left;"><a href="./detail.php" class="contentTitle">ChatGPTに聞いてみた！</a></td>
+                    <td style="text-align: left; font-size: 180%; padding: 10px;"><a href="./detail.php" class="contentTitle">ChatGPTに聞いてみた！</a></td>
                     <th class="contentBody">
                         ChatGPTに今話題のスクラム開発について聞いてみた！
                         <div style="text-align: right;">
@@ -72,11 +72,11 @@ require_once __DIR__ . '/newNav.php';
                                 <span class="material-symbols-outlined">comment</span><span>3</span>
                             </button>
                         </div>
-                        <p class="timeStamp"><img src="./images/calendar(16).jpeg"> 2024/04/25</p>
+                        <p class="timeStamp" style="color: #666;"><img src="./images/calendar(16).jpeg"> 2024/04/25</p>
                     </th>
                 </tr>
                 <tr class="target" data-category="AI" bgcolor="#ffffff">
-                    <td style="text-align: left;"><a href="./detail.php" class="contentTitle">「ゼロから始める機械学習」: 機械学習入門ガイド</a></td>
+                    <td style="text-align: left; font-size: 180%; padding: 10px;"><a href="./detail.php" class="contentTitle">「ゼロから始める機械学習」: 機械学習入門ガイド</a></td>
                     <th class="contentBody">
                         この記事では、機械学習の基本から応用までを解説します。アルゴリズム、データセット、モデルの選択方法などについて詳しく説明します。
                         <div style="text-align: right;">
@@ -87,11 +87,11 @@ require_once __DIR__ . '/newNav.php';
                                 <span class="material-symbols-outlined">comment</span><span>5</span>
                             </button>
                         </div>
-                        <p class="timeStamp"><img src="./images/calendar(16).jpeg"> 2024/03/25</p>
+                        <p class="timeStamp" style="color: #666;"><img src="./images/calendar(16).jpeg"> 2024/03/25</p>
                     </th>
                 </tr>
                 <tr class="target" data-category="Web" bgcolor="#ffffff">
-                    <td style="text-align: left;"><a href="./detail.php" class="contentTitle">「最新のフロントエンド開発トレンド」: 2023年版</a></td>
+                    <td style="text-align: left; font-size: 180%; padding: 10px;"><a href="./detail.php" class="contentTitle">「最新のフロントエンド開発トレンド」: 2023年版</a></td>
                     <th class="contentBody">
                         フロントエンド開発の最新トレンドを紹介する記事です。Webコンポーネント、TypeScript、モバイルフレームワークなどに焦点を当てています。
                         <div style="text-align: right;">
@@ -102,11 +102,11 @@ require_once __DIR__ . '/newNav.php';
                                 <span class="material-symbols-outlined">comment</span><span>1</span>
                             </button>
                         </div>
-                        <p class="timeStamp"><img src="./images/calendar(16).jpeg"> 2024/01/04</p>
+                        <p class="timeStamp" style="color: #666;"><img src="./images/calendar(16).jpeg"> 2024/01/04</p>
                     </th>
                 </tr>
                 <tr class="target" data-category="AWS" bgcolor="#ffffff">
-                    <td style="text-align: left;"><a href="./detail.php" class="contentTitle">「サーバーレスアーキテクチャの実践的ガイド」: AWS Lambda、Azure Functions、Google Cloud Functionsの比較</a></td>
+                    <td style="text-align: left; font-size: 180%; padding: 10px;"><a href="./detail.php" class="contentTitle">「サーバーレスアーキテクチャの実践的ガイド」: AWS Lambda、Azure Functions、Google Cloud Functionsの比較</a></td>
                     <th class="contentBody">
                         サーバーレスアーキテクチャの選択肢と、それぞれのプラットフォームでの実装方法を比較する記事です。関数のデプロイ、スケーリング、コストなどについて詳しく解説します。
                         <div style="text-align: right;">
@@ -117,11 +117,11 @@ require_once __DIR__ . '/newNav.php';
                                 <span class="material-symbols-outlined">comment</span><span>4</span>
                             </button>
                         </div>
-                        <p class="timeStamp"><img src="./images/calendar(16).jpeg"> 2023/12/25</p>
+                        <p class="timeStamp" style="color: #666;"><img src="./images/calendar(16).jpeg"> 2023/12/25</p>
                     </th>
                 </tr>
                 <tr class="target" data-category="C" bgcolor="#ffffff">
-                    <td style="text-align: left;"><a href="./detail.php" class="contentTitle">初心者向けC言語入門ガイド</a></td>
+                    <td style="text-align: left; font-size: 180%; padding: 10px;"><a href="./detail.php" class="contentTitle">初心者向けC言語入門ガイド</a></td>
                     <th class="contentBody">
                         本記事は、プログラミング初心者向けにC言語の基本を解説する入門ガイドです。
                         <div style="text-align: right;">
@@ -132,11 +132,11 @@ require_once __DIR__ . '/newNav.php';
                                 <span class="material-symbols-outlined">comment</span><span>11</span>
                             </button>
                         </div>
-                        <p class="timeStamp"><img src="./images/calendar(16).jpeg"> 2023/12/14</p>
+                        <p class="timeStamp" style="color: #666;"><img src="./images/calendar(16).jpeg"> 2023/12/14</p>
                     </th>
                 </tr>
                 <tr class="target" data-category="Python" bgcolor="#ffffff">
-                    <td style="text-align: left;"><a href="./detail.php" class="contentTitle">Pythonで実現する効率的なデータサイエンス</a></td>
+                    <td style="text-align: left; font-size: 180%; padding: 10px;"><a href="./detail.php" class="contentTitle">Pythonで実現する効率的なデータサイエンス</a></td>
                     <th class="contentBody">
                         Pythonの持つ豊富な機能を駆使して効率的にデータサイエンスを行う方法を解説します。
                         <div style="text-align: right;">
@@ -147,11 +147,11 @@ require_once __DIR__ . '/newNav.php';
                                 <span class="material-symbols-outlined">comment</span><span>12</span>
                             </button>
                         </div>
-                        <p class="timeStamp"><img src="./images/calendar(16).jpeg"> 2023/11/22</p>
+                        <p class="timeStamp" style="color: #666;"><img src="./images/calendar(16).jpeg"> 2023/11/22</p>
                     </th>
                 </tr>
                 <tr class="target" data-category="Java" bgcolor="#ffffff">
-                    <td style="text-align: left;"><a href="./detail.php" class="contentTitle">Javaによる効率的な並行プログラミング</a></td>
+                    <td style="text-align: left; font-size: 180%; padding: 10px;"><a href="./detail.php" class="contentTitle">Javaによる効率的な並行プログラミング</a></td>
                     <th class="contentBody">
                         Javaには、複数の処理を同時に行うための強力な機能があります。本記事では、Javaを使って効率的に並行プログラミングを行う方法を解説します。
                         <div style="text-align: right;">
@@ -162,7 +162,7 @@ require_once __DIR__ . '/newNav.php';
                                 <span class="material-symbols-outlined">comment</span><span>8</span>
                             </button>
                         </div>
-                        <p class="timeStamp"><img src="./images/calendar(16).jpeg"> 2023/10/19</p>
+                        <p class="timeStamp" style="color: #666;"><img src="./images/calendar(16).jpeg"> 2023/10/19</p>
                     </th>
                 </tr>
             </table>

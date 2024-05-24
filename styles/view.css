@@ -164,7 +164,7 @@ input[type="radio"] {
 .contentTitle {
     color: black;
     text-align: left;
-    padding: 0px;
+    white-space: pre-line;
     text-decoration:none;
     transition: color .3s;
     text-decoration: none;
@@ -183,6 +183,8 @@ input[type="radio"] {
 .contentBody {
     text-align: left;
     vertical-align: top;
+    padding: 10px;
+    font-weight: normal;
 }
 
 .timeStamp {
