@@ -20,9 +20,6 @@ footer {
     float: right;
     margin-right: 30px;
     margin-top: -30px; /* ボタンを上に5px移動 */
-}
-
-button {
     color: #333; /* 文字色を黒に */
     background: white;
     font-size: 14px; /* 文字サイズを14pxに */
@@ -32,6 +29,6 @@ button {
     transition: 0.3s ease;
 }
 
-button:hover {
+.right:hover {
     background-color: aqua;
 }
